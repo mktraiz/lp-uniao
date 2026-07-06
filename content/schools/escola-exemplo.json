@@ -16,6 +16,7 @@
   "lps": [
     {
       "type": "captacao",
+      "model": "matriculas-premium",
       "title": "Matriculas abertas no Colegio Exemplo",
       "subtitle": "Conheca uma escola completa para o desenvolvimento do seu filho.",
       "cta": "Quero falar com a escola",
@@ -25,7 +26,16 @@
         "aliases": []
       },
       "whatsapp": "",
-      "formId": "",
+      "hubspot": {
+        "region": "na1",
+        "portalId": "",
+        "formId": ""
+      },
+      "offer": "Preencha o formulario para conversar com a equipe de matriculas.",
+      "stat": {
+        "value": "2026",
+        "label": "Matriculas abertas"
+      },
       "highlights": [
         "Educacao Infantil ao Ensino Medio",
         "Acompanhamento pedagogico proximo",
@@ -34,6 +44,7 @@
     },
     {
       "type": "campanha",
+      "model": "bolsao-resultado",
       "title": "Agende uma visita ao Colegio Exemplo",
       "subtitle": "Veja de perto a rotina, os espacos e a proposta pedagogica.",
       "cta": "Agendar visita",
@@ -43,7 +54,16 @@
         "aliases": []
       },
       "whatsapp": "",
-      "formId": "",
+      "hubspot": {
+        "region": "na1",
+        "portalId": "",
+        "formId": ""
+      },
+      "offer": "Preencha o formulario para receber as informacoes da campanha.",
+      "stat": {
+        "value": "Bolsa",
+        "label": "Campanha com inscricao por formulario"
+      },
       "highlights": [
         "Atendimento personalizado",
         "Tour pela unidade",

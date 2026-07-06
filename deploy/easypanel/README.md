@@ -37,6 +37,8 @@ Build arg: LP_APP_ID=marca-exemplo--colegio-exemplo--campanha
 
 O manifesto gerado em `dist/apps-manifest.json` lista todos os apps de LP disponiveis.
 
+O build tambem gera `dist/easypanel-apps.csv` para facilitar a criacao dos apps no painel.
+
 Cada item do manifesto inclui:
 
 - `appId`: valor para o build arg `LP_APP_ID`.

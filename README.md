@@ -15,6 +15,8 @@ content/
 landing-pages/
   marcas/               Briefs, copies, assets e referencias por marca/escola
 templates/              HTML base usado pelo gerador estatico
+  models/               Modelos visuais de LP
+  shared/               Tokens e CSS compartilhado
 scripts/                Automacoes para criar escolas e gerar o build
 deploy/
   easypanel/            Arquivos e notas de publicacao na VPS
@@ -28,8 +30,10 @@ dist/
 2. Crie a pasta da escola a partir de `landing-pages/marcas/_template`.
 3. Preencha os briefs das duas LPs.
 4. Defina o dominio principal de cada LP em `lps[].domain.primary`.
-5. Rode `npm run build`.
-6. Publique cada LP como um aplicativo separado no EasyPanel usando o `Dockerfile` da raiz.
+5. Escolha o modelo visual em `lps[].model`.
+6. Configure `lps[].hubspot.portalId` e `lps[].hubspot.formId`.
+7. Rode `npm run build`.
+8. Publique cada LP como um aplicativo separado no EasyPanel usando o `Dockerfile` da raiz.
 
 ## Comandos
 
@@ -55,6 +59,15 @@ marca-exemplo--colegio-exemplo--campanha
 ```
 
 O manifesto `dist/apps-manifest.json` lista o `appId`, o dominio principal e os aliases de cada LP.
+O arquivo `dist/easypanel-apps.csv` resume os apps para criacao no EasyPanel.
+
+## Modelos disponiveis
+
+- Bolsao: `bolsao-resultado`, `bolsao-jornada`.
+- Matriculas: `matriculas-premium`, `matriculas-proximidade`, `matriculas-performance`, `matriculas-afeto`.
+- Eventos de captacao: `evento-open-day`, `evento-experiencia`, `evento-palestra`, `evento-imersao`.
+
+Veja [docs/modelos-lp.md](docs/modelos-lp.md) para o criterio de uso.
 
 ## Publicacao no EasyPanel
 

@@ -10,11 +10,13 @@ Cada arquivo representa uma escola e contem:
 - dados da escola;
 - cores;
 - as duas LPs;
+- modelo visual de cada LP;
 - textos principais;
 - CTA;
 - destaques.
 - dominio principal da LP;
 - aliases de dominio, quando houver.
+- formulario HubSpot.
 
 ## Producao
 
@@ -58,3 +60,22 @@ Exemplos:
 bolsao.matrizeducacao.com.br
 matriculas.apogeu.com.br
 ```
+
+## Modelos
+
+Os modelos ficam em `templates/models/`.
+
+Catalogo:
+
+- `bolsao-resultado`
+- `bolsao-jornada`
+- `matriculas-premium`
+- `matriculas-proximidade`
+- `matriculas-performance`
+- `matriculas-afeto`
+- `evento-open-day`
+- `evento-experiencia`
+- `evento-palestra`
+- `evento-imersao`
+
+O campo `lps[].model` escolhe qual deles sera usado no build.

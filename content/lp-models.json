@@ -1,0 +1,48 @@
+{
+  "bolsao": [
+    {
+      "model": "bolsao-resultado",
+      "use": "Campanhas com apelo forte de bolsa, desconto, prova ou oportunidade objetiva."
+    },
+    {
+      "model": "bolsao-jornada",
+      "use": "Campanhas que precisam explicar etapas, inscricao, prova, resultado e proximo contato."
+    }
+  ],
+  "matriculas": [
+    {
+      "model": "matriculas-premium",
+      "use": "LP institucional de alto valor para marcas fortes e decisao familiar mais considerada."
+    },
+    {
+      "model": "matriculas-proximidade",
+      "use": "LP para destacar acolhimento, unidade, rotina e atendimento consultivo."
+    },
+    {
+      "model": "matriculas-performance",
+      "use": "LP comparativa, orientada a diferenciais, resultados e argumentos de escolha."
+    },
+    {
+      "model": "matriculas-afeto",
+      "use": "LP mais emocional para primeira infancia, fundamental ou campanhas com tom familiar."
+    }
+  ],
+  "eventos-captacao": [
+    {
+      "model": "evento-open-day",
+      "use": "Evento de visita guiada, escola aberta ou tour pela unidade."
+    },
+    {
+      "model": "evento-experiencia",
+      "use": "Vivencias, aulas experimentais, day use e experiencias com alunos/familias."
+    },
+    {
+      "model": "evento-palestra",
+      "use": "Palestras, encontros com coordenacao, reunioes pedagogicas e eventos de autoridade."
+    },
+    {
+      "model": "evento-imersao",
+      "use": "Eventos especiais, imersivos, premium ou com agenda mais elaborada."
+    }
+  ]
+}
