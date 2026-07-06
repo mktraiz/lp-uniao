@@ -1,0 +1,43 @@
+{
+  "brand": {
+    "name": "Marca Exemplo",
+    "slug": "marca-exemplo"
+  },
+  "school": {
+    "name": "Colegio Exemplo",
+    "slug": "colegio-exemplo",
+    "city": "Rio de Janeiro",
+    "state": "RJ"
+  },
+  "audience": "Familias interessadas em matricula escolar.",
+  "primaryColor": "#0F6B5F",
+  "secondaryColor": "#F5B84B",
+  "lps": [
+    {
+      "type": "captacao",
+      "title": "Matriculas abertas no Colegio Exemplo",
+      "subtitle": "Conheca uma escola completa para o desenvolvimento do seu filho.",
+      "cta": "Quero falar com a escola",
+      "whatsapp": "",
+      "formId": "",
+      "highlights": [
+        "Educacao Infantil ao Ensino Medio",
+        "Acompanhamento pedagogico proximo",
+        "Estrutura completa para aprender melhor"
+      ]
+    },
+    {
+      "type": "campanha",
+      "title": "Agende uma visita ao Colegio Exemplo",
+      "subtitle": "Veja de perto a rotina, os espacos e a proposta pedagogica.",
+      "cta": "Agendar visita",
+      "whatsapp": "",
+      "formId": "",
+      "highlights": [
+        "Atendimento personalizado",
+        "Tour pela unidade",
+        "Conversa com a equipe pedagogica"
+      ]
+    }
+  ]
+}

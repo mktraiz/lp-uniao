@@ -1,0 +1,14 @@
+{
+  "name": "raiz-lps",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "npx serve dist",
+    "new:school": "node scripts/new-school.mjs"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
