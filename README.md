@@ -43,6 +43,15 @@ npm run build
 npm run serve
 ```
 
+Para ver todos os modelos:
+
+```powershell
+npm run build
+npm run serve
+```
+
+Abra `/previews/`.
+
 O build gera os arquivos finais em `dist/apps/`.
 
 Cada LP recebe um `appId` no formato:

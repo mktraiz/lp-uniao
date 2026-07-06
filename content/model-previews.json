@@ -1,0 +1,143 @@
+{
+  "school": {
+    "brand": {
+      "name": "RAIZ Educacao",
+      "slug": "raiz-educacao",
+      "domain": "raizeducacao.com.br"
+    },
+    "school": {
+      "name": "Colegio Modelo",
+      "slug": "colegio-modelo",
+      "city": "Rio de Janeiro",
+      "state": "RJ"
+    },
+    "primaryColor": "#0F6B5F",
+    "secondaryColor": "#F5B84B"
+  },
+  "lps": [
+    {
+      "category": "Bolsao",
+      "type": "campanha",
+      "model": "bolsao-resultado",
+      "title": "Bolsao com inscricoes abertas",
+      "subtitle": "Uma oportunidade objetiva para familias que querem estudar em uma escola completa.",
+      "cta": "Inscrever no bolsao",
+      "offer": "Preencha o formulario para receber as regras, datas e proximos passos da campanha.",
+      "stat": { "value": "Bolsa", "label": "Campanha com formulario HubSpot" },
+      "highlights": ["Oferta clara para conversao direta", "Boa para campanhas de prova e desconto", "Hero forte com estatistica ou chamada de oportunidade"],
+      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+    },
+    {
+      "category": "Bolsao",
+      "type": "campanha",
+      "model": "bolsao-jornada",
+      "title": "Participe do bolsao do Colegio Modelo",
+      "subtitle": "Entenda as etapas, confirme a inscricao e receba acompanhamento da equipe da escola.",
+      "cta": "Comecar inscricao",
+      "offer": "Modelo indicado para explicar jornada de inscricao, prova, resultado e atendimento.",
+      "stat": { "value": "3 etapas", "label": "Inscricao, prova e retorno" },
+      "highlights": ["Explica a campanha sem confundir", "Reduz duvidas antes do formulario", "Funciona bem para familias indecisas"],
+      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+    },
+    {
+      "category": "Matriculas",
+      "type": "captacao",
+      "model": "matriculas-premium",
+      "title": "Matriculas abertas para 2026",
+      "subtitle": "Conheca uma proposta pedagogica forte, com acompanhamento proximo e estrutura completa.",
+      "cta": "Falar com matriculas",
+      "offer": "Preencha o formulario para receber atendimento da equipe de matriculas.",
+      "stat": { "value": "2026", "label": "Periodo de matriculas aberto" },
+      "highlights": ["Tom institucional de alto valor", "Boa para marcas fortes", "Funciona como LP principal da escola"],
+      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+    },
+    {
+      "category": "Matriculas",
+      "type": "captacao",
+      "model": "matriculas-proximidade",
+      "title": "Uma escola perto da rotina da sua familia",
+      "subtitle": "Agende uma conversa e entenda como a unidade pode acompanhar seu filho de perto.",
+      "cta": "Agendar conversa",
+      "offer": "Modelo pensado para unidade, acolhimento, rotina escolar e atendimento consultivo.",
+      "stat": { "value": "Visita", "label": "Atendimento proximo" },
+      "highlights": ["Valoriza acolhimento", "Bom para campanhas locais", "Foco em visita e conversa"],
+      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+    },
+    {
+      "category": "Matriculas",
+      "type": "captacao",
+      "model": "matriculas-performance",
+      "title": "Escolha uma escola com diferenciais claros",
+      "subtitle": "Compare estrutura, acompanhamento e proposta pedagogica antes de decidir a matricula.",
+      "cta": "Receber atendimento",
+      "offer": "Modelo para argumentos objetivos, diferenciais e comparacao.",
+      "stat": { "value": "Diferenciais", "label": "Escolha com criterio" },
+      "highlights": ["Mais racional e comparativo", "Bom para ensino fundamental e medio", "Organiza motivos de escolha"],
+      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+    },
+    {
+      "category": "Matriculas",
+      "type": "captacao",
+      "model": "matriculas-afeto",
+      "title": "O primeiro passo para uma rotina escolar mais acolhedora",
+      "subtitle": "Converse com a escola e conheca um ambiente pensado para aprender com cuidado.",
+      "cta": "Quero conhecer",
+      "offer": "Modelo mais emocional, bom para primeira infancia e familias em fase inicial de decisao.",
+      "stat": { "value": "Cuidado", "label": "Atendimento com escuta" },
+      "highlights": ["Tom familiar", "Boa entrada para visitas", "Menos agressivo comercialmente"],
+      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+    },
+    {
+      "category": "Evento de captacao",
+      "type": "evento",
+      "model": "evento-open-day",
+      "title": "Open Day no Colegio Modelo",
+      "subtitle": "Visite a escola, conheca a equipe e veja de perto os espacos da unidade.",
+      "cta": "Confirmar presenca",
+      "offer": "Modelo para escola aberta, visita guiada e tour pela unidade.",
+      "event": { "dateLabel": "Open Day" },
+      "stat": { "value": "Open Day", "label": "Visita guiada" },
+      "highlights": ["Foco em presenca no evento", "Boa leitura no mobile", "CTA direto para confirmacao"],
+      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+    },
+    {
+      "category": "Evento de captacao",
+      "type": "evento",
+      "model": "evento-experiencia",
+      "title": "Viva uma experiencia na escola",
+      "subtitle": "Participe de uma vivencia pensada para aproximar familia, aluno e equipe pedagogica.",
+      "cta": "Reservar vaga",
+      "offer": "Modelo para aula experimental, experiencia pratica e vivencia com alunos.",
+      "event": { "dateLabel": "Vivencia" },
+      "stat": { "value": "Vivencia", "label": "Experiencia presencial" },
+      "highlights": ["Mais sensorial e acolhedor", "Ajuda a vender rotina", "Bom para evento por segmento"],
+      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+    },
+    {
+      "category": "Evento de captacao",
+      "type": "evento",
+      "model": "evento-palestra",
+      "title": "Encontro com a equipe pedagogica",
+      "subtitle": "Uma conversa para entender a proposta da escola e tirar duvidas antes da matricula.",
+      "cta": "Inscrever no encontro",
+      "offer": "Modelo para palestra, encontro com coordenacao ou evento de autoridade.",
+      "event": { "dateLabel": "Encontro" },
+      "stat": { "value": "Palestra", "label": "Conteudo para familias" },
+      "highlights": ["Bom para autoridade pedagogica", "Organiza programacao", "Funciona para eventos online ou presenciais"],
+      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+    },
+    {
+      "category": "Evento de captacao",
+      "type": "evento",
+      "model": "evento-imersao",
+      "title": "Imersao para conhecer o Colegio Modelo",
+      "subtitle": "Uma experiencia especial para familias que querem conhecer a escola em profundidade.",
+      "cta": "Solicitar participacao",
+      "offer": "Modelo para eventos premium, agendas elaboradas e campanhas especiais.",
+      "event": { "dateLabel": "Imersao" },
+      "stat": { "value": "Imersao", "label": "Agenda especial" },
+      "highlights": ["Visual mais premium", "Boa para evento limitado", "Cria percepcao de exclusividade"],
+      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+    }
+  ]
+}
