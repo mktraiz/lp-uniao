@@ -62,7 +62,7 @@ const hubspotFor = (appId, lp) => {
 
   if (!portalId || !formId) {
     return {
-      form: `<div class="hubspot-placeholder">Formulario HubSpot pendente. Configure <strong>hubspot.portalId</strong> e <strong>hubspot.formId</strong> nesta LP.</div>`,
+      form: `<div class="hubspot-placeholder"><span>Formulario HubSpot pendente</span><p>Configure os campos abaixo nesta LP para ativar a captura.</p><code>hubspot.portalId</code><code>hubspot.formId</code></div>`,
       script: "",
       configured: false
     };

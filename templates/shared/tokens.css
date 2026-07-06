@@ -3,12 +3,14 @@
         --brand-secondary: {{secondaryColor}};
 
         --color-neutral-0: #ffffff;
-        --color-neutral-50: #f7f8f6;
-        --color-neutral-100: #eef1ed;
-        --color-neutral-200: #dde3dc;
-        --color-neutral-500: #66736e;
-        --color-neutral-700: #2d3935;
-        --color-neutral-900: #111916;
+        --color-neutral-50: #f6f7f3;
+        --color-neutral-100: #ecefe8;
+        --color-neutral-200: #d9e0d5;
+        --color-neutral-500: #626f69;
+        --color-neutral-700: #2c3833;
+        --color-neutral-900: #101612;
+        --color-warm: #fbf8ef;
+        --color-ink-soft: #25312d;
 
         --color-background: var(--color-neutral-0);
         --color-foreground: var(--color-neutral-900);
@@ -18,7 +20,7 @@
         --color-primary-foreground: #ffffff;
         --color-accent: var(--brand-secondary);
         --color-accent-foreground: #121713;
-        --color-border: rgb(17 25 22 / 0.14);
+        --color-border: rgb(16 22 18 / 0.14);
         --color-ring: var(--brand-primary);
 
         --space-1: 0.25rem;
@@ -65,4 +67,6 @@
         --card-border: var(--color-border);
         --card-radius: var(--radius-lg);
         --card-padding: var(--space-6);
+        --shadow-soft: 0 18px 60px rgb(16 22 18 / 0.10);
+        --shadow-panel: 0 26px 80px rgb(16 22 18 / 0.16);
       }
