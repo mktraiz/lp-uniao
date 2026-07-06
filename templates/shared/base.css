@@ -1474,15 +1474,16 @@
       }
 
       .union-horizon {
-        --union-blue-950: #031528;
-        --union-blue-900: #06234a;
-        --union-blue-800: #093a78;
-        --union-blue-700: #115996;
-        --union-gold: #f0bd2d;
-        --union-gold-strong: #ffd23f;
-        --union-ice: #f3f8ff;
-        --union-text: #10233b;
-        --union-muted: #5a6c80;
+        --union-blue-950: #171f2b;
+        --union-blue-900: #26384a;
+        --union-blue-800: #0d6e98;
+        --union-blue-700: #1688b7;
+        --union-red: #c33a22;
+        --union-red-dark: #8f261a;
+        --union-red-soft: #fff1ed;
+        --union-ice: #f7f4f1;
+        --union-text: #202833;
+        --union-muted: #65717d;
         background: #ffffff;
         color: var(--union-text);
       }
@@ -1490,8 +1491,8 @@
       .union-horizon .button {
         min-height: 52px;
         border-radius: 14px;
-        background: var(--union-gold);
-        color: #071628;
+        background: var(--union-red);
+        color: #ffffff;
         box-shadow: none;
       }
 
@@ -1507,7 +1508,7 @@
         min-height: 94dvh;
         overflow: hidden;
         color: #ffffff;
-        background: #061d3d;
+        background: #2c1512;
         isolation: isolate;
       }
 
@@ -1517,7 +1518,7 @@
         inset: 0;
         z-index: -2;
         background:
-          linear-gradient(90deg, rgb(2 12 26 / 0.94), rgb(6 29 61 / 0.82) 42%, rgb(6 29 61 / 0.42) 76%),
+          linear-gradient(90deg, rgb(20 22 28 / 0.94), rgb(64 28 22 / 0.82) 45%, rgb(64 28 22 / 0.40) 78%),
           var(--hero-image);
         background-size: cover;
         background-position: center;
@@ -1583,8 +1584,8 @@
         justify-content: center;
         padding: 0 var(--space-5);
         border-radius: 14px;
-        background: var(--union-gold-strong);
-        color: #071628;
+        background: var(--union-red);
+        color: #ffffff;
         font-weight: 950;
       }
 
@@ -1611,7 +1612,7 @@
         border: 1px solid rgb(255 255 255 / 0.18);
         border-radius: 999px;
         background: rgb(255 255 255 / 0.08);
-        color: #b8dcff;
+        color: #d7eff7;
         font-size: 0.78rem;
         font-weight: 950;
         text-transform: uppercase;
@@ -1651,7 +1652,7 @@
         border-radius: 18px;
         background:
           linear-gradient(180deg, rgb(0 0 0 / 0.02), rgb(0 0 0 / 0.18)),
-          var(--hero-image);
+          var(--secondary-image);
         background-size: cover;
         background-position: center;
         box-shadow: 0 22px 54px rgb(0 0 0 / 0.22);
@@ -1721,7 +1722,7 @@
       }
 
       .union-horizon h2 {
-        color: var(--union-blue-900);
+        color: var(--union-red-dark);
         font-size: clamp(2.4rem, 4.5vw, 5rem);
         line-height: 0.98;
       }
@@ -1729,9 +1730,9 @@
       .union-horizon-section .union-horizon-eyebrow,
       .union-horizon-tour .union-horizon-eyebrow,
       .union-horizon-lead .union-horizon-eyebrow {
-        border-color: rgb(17 89 150 / 0.16);
-        background: rgb(17 89 150 / 0.07);
-        color: var(--union-blue-700);
+        border-color: rgb(195 58 34 / 0.18);
+        background: var(--union-red-soft);
+        color: var(--union-red-dark);
       }
 
       .union-horizon-text {
@@ -1772,7 +1773,7 @@
         position: relative;
         min-height: 250px;
         overflow: hidden;
-        border: 1px solid rgb(17 89 150 / 0.12);
+        border: 1px solid rgb(195 58 34 / 0.14);
         border-radius: 16px;
         background: #ffffff;
         box-shadow: 0 12px 30px rgb(16 35 59 / 0.07);
@@ -1785,12 +1786,12 @@
         height: 52px;
         margin-bottom: var(--space-5);
         border-radius: 14px;
-        background: #f7c948;
+        background: var(--union-red);
         box-shadow: none;
       }
 
       .union-horizon .school-content-card h3 {
-        color: var(--union-blue-800);
+        color: var(--union-red-dark);
         font-size: clamp(1.22rem, 1.6vw, 1.55rem);
       }
 
@@ -1800,7 +1801,7 @@
 
       .union-horizon-tour {
         overflow: hidden;
-        background: var(--union-blue-950);
+        background: #201f22;
         color: #ffffff;
       }
 
@@ -1865,12 +1866,12 @@
       }
 
       .union-horizon-family-card:nth-child(2) {
-        background: var(--union-blue-800);
+        background: var(--union-red-dark);
       }
 
       .union-horizon-family-card:nth-child(3) {
-        background: var(--union-gold);
-        color: #071628;
+        background: var(--union-blue-800);
+        color: #ffffff;
       }
 
       .union-horizon-family-card span {
@@ -1895,7 +1896,7 @@
       }
 
       .union-horizon-lead {
-        background: var(--union-blue-900);
+        background: var(--union-red-dark);
         color: #ffffff;
       }
 
@@ -1924,7 +1925,7 @@
 
       .union-horizon-form {
         padding: var(--space-6);
-        border: 1px solid rgb(17 89 150 / 0.14);
+        border: 1px solid rgb(195 58 34 / 0.16);
         border-radius: 18px;
         background: #ffffff;
         color: var(--union-text);
@@ -1948,8 +1949,8 @@
 
       .union-horizon-form .hubspot-placeholder {
         min-height: 250px;
-        border-color: rgb(17 89 150 / 0.18);
-        background: #f7f9fc;
+        border-color: rgb(195 58 34 / 0.18);
+        background: #fff8f5;
         color: var(--union-text);
       }
 
@@ -1959,9 +1960,9 @@
       }
 
       .union-horizon-form .hubspot-placeholder code {
-        border-color: rgb(17 89 150 / 0.16);
+        border-color: rgb(195 58 34 / 0.18);
         background: #ffffff;
-        color: var(--union-blue-800);
+        color: var(--union-red-dark);
       }
 
       .union-horizon-footer {
@@ -1981,7 +1982,7 @@
 
       .union-horizon-footer a {
         justify-self: end;
-        color: var(--union-gold-strong);
+        color: #ff8a72;
         font-weight: 950;
       }
 
