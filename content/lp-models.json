@@ -11,6 +11,10 @@
   ],
   "matriculas": [
     {
+      "model": "matriculas-uniao-institucional",
+      "use": "LP institucional fotografica inspirada em escolas tradicionais, com historia, estrutura, diferenciais e agendamento de visita."
+    },
+    {
       "model": "matriculas-premium",
       "use": "LP institucional de alto valor para marcas fortes e decisao familiar mais considerada."
     },

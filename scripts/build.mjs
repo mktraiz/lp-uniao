@@ -53,6 +53,7 @@ const domainFor = (schoolConfig, lp) => {
 
 const textFor = (value, fallback = "") => escapeHtml(value || fallback);
 const csvValue = (value = "") => `"${String(value).replaceAll('"', '""')}"`;
+const cssUrlFor = (value = "") => String(value || "").replaceAll("\\", "").replaceAll("'", "%27").replaceAll("\"", "%22").replaceAll(")", "%29");
 
 const hubspotFor = (appId, lp) => {
   const portalId = lp.hubspot?.portalId || "";
@@ -101,6 +102,9 @@ async function renderLp({ schoolConfig, lp, appId, pageTemplate, tokensCss, base
     statValue: textFor(lp.stat?.value, lp.type === "captacao" ? "2026" : "Agenda"),
     statLabel: textFor(lp.stat?.label, lp.type === "captacao" ? "Matriculas abertas" : "Inscricoes abertas"),
     eventDate: textFor(lp.event?.dateLabel, "Em breve"),
+    heroImage: cssUrlFor(lp.media?.heroImage || ""),
+    secondaryImage: cssUrlFor(lp.media?.secondaryImage || lp.media?.heroImage || ""),
+    logoImage: cssUrlFor(lp.media?.logoImage || ""),
     hubspotForm: hubspot.form,
     primaryColor: schoolConfig.primaryColor || "#0F6B5F",
     secondaryColor: schoolConfig.secondaryColor || "#F5B84B"

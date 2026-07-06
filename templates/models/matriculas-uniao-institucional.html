@@ -1,0 +1,85 @@
+    <main class="school-conversion" style="--hero-image: url('{{heroImage}}'); --secondary-image: url('{{secondaryImage}}');">
+      <section class="school-hero">
+        <nav class="school-nav">
+          <div class="wrap school-nav-inner">
+            <div class="school-logo" style="--logo-image: url('{{logoImage}}');"><span>{{schoolName}}</span></div>
+            <a class="school-nav-cta" href="#formulario">Agendar visita</a>
+          </div>
+        </nav>
+
+        <div class="wrap school-hero-grid">
+          <div class="school-hero-copy">
+            <div class="school-proof">Referencia regional em educacao</div>
+            <h1>{{title}}</h1>
+            <p>{{subtitle}}</p>
+            <div class="school-hero-actions">
+              <a class="button" href="#formulario">{{cta}}</a>
+              <a class="button button-secondary" href="#diferenciais">Ver diferenciais</a>
+            </div>
+            <div class="school-trust-row">
+              <span><strong>{{statValue}}</strong>{{statLabel}}</span>
+              <span><strong>6 mil m2</strong>Estrutura para aprender melhor</span>
+              <span><strong>Centro</strong>{{city}}/{{state}}</span>
+            </div>
+          </div>
+
+          <aside id="formulario" class="school-lead-card">
+            <div class="school-card-kicker">Atendimento de matriculas</div>
+            <h2>Converse com a escola.</h2>
+            <p>Receba orientacao sobre vagas, segmentos, visita e proximos passos.</p>
+            {{hubspotForm}}
+          </aside>
+        </div>
+      </section>
+
+      <section id="historia" class="school-story">
+        <div class="wrap school-story-grid">
+          <div>
+            <div class="school-card-kicker">Por que conhecer</div>
+            <h2>Tradicao, estrutura e acompanhamento em uma decisao importante.</h2>
+          </div>
+          <p>{{offer}}</p>
+        </div>
+      </section>
+
+      <section id="diferenciais" class="school-proof-section">
+        <div class="wrap">
+          <div class="school-section-head">
+            <div>
+              <div class="school-card-kicker">Diferenciais</div>
+              <h2>Motivos claros para a familia avancar.</h2>
+            </div>
+            <a class="school-inline-link" href="#formulario">Quero atendimento</a>
+          </div>
+          <div class="school-feature-grid">
+            {{highlights}}
+          </div>
+        </div>
+      </section>
+
+      <section class="school-segments">
+        <div class="wrap school-segments-grid">
+          <div class="school-photo"></div>
+          <div>
+            <div class="school-card-kicker">Segmentos</div>
+            <h2>Uma jornada completa para diferentes etapas escolares.</h2>
+            <div class="school-segment-list">
+              <span>Ensino Fundamental Anos Iniciais</span>
+              <span>Ensino Fundamental Anos Finais</span>
+              <span>Ensino Medio</span>
+              <span>Programa bilingue</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="school-final-cta">
+        <div class="wrap school-final-card">
+          <div>
+            <div class="school-card-kicker">Proximo passo</div>
+            <h2>Transforme interesse em visita.</h2>
+          </div>
+          <a class="button" href="#formulario">Agendar agora</a>
+        </div>
+      </section>
+    </main>

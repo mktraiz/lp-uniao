@@ -42,6 +42,23 @@
     {
       "category": "Matriculas",
       "type": "captacao",
+      "model": "matriculas-uniao-institucional",
+      "title": "Referencia em educacao para novas geracoes",
+      "subtitle": "Uma escola com historia, estrutura e acompanhamento proximo para cada etapa da vida escolar.",
+      "cta": "Agendar uma visita",
+      "offer": "Somos uma instituicao que une tradicao, modernidade e formacao humana para preparar alunos para os desafios do presente e do futuro.",
+      "stat": { "value": "155 anos", "label": "Tradicao educacional" },
+      "media": {
+        "logoImage": "https://colegiouniao.com.br/_next/image/?url=https%3A%2F%2Fcms.raizeducacao.com.br%2Funiaofinal%2Fwp-content%2Fuploads%2Fsites%2F25%2F2024%2F12%2FMonocromatica-positiva.png&w=384&q=95",
+        "heroImage": "https://colegiouniao.com.br/_next/image/?url=https%3A%2F%2Fcms.raizeducacao.com.br%2Funiaofinal%2Fwp-content%2Fuploads%2Fsites%2F25%2F2025%2F08%2FDSC04964-2048x707.png&w=1920&q=75",
+        "secondaryImage": "https://colegiouniao.com.br/_next/image/?url=https%3A%2F%2Fcms.raizeducacao.com.br%2Funiaofinal%2Fwp-content%2Fuploads%2Fsites%2F25%2F2025%2F07%2FMG_5714-1024x682.png&w=1080&q=75"
+      },
+      "highlights": ["Ensino bilingue desde os primeiros anos", "Tradicao centenaria com ensino atualizado", "Formacao de liderancas e protagonismo juvenil", "Ambiente acolhedor, seguro e com estrutura completa"],
+      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+    },
+    {
+      "category": "Matriculas",
+      "type": "captacao",
       "model": "matriculas-premium",
       "title": "Matriculas abertas para 2026",
       "subtitle": "Conheca uma proposta pedagogica forte, com acompanhamento proximo e estrutura completa.",

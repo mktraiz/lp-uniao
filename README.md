@@ -73,7 +73,7 @@ O arquivo `dist/easypanel-apps.csv` resume os apps para criacao no EasyPanel.
 ## Modelos disponiveis
 
 - Bolsao: `bolsao-resultado`, `bolsao-jornada`.
-- Matriculas: `matriculas-premium`, `matriculas-proximidade`, `matriculas-performance`, `matriculas-afeto`.
+- Matriculas: `matriculas-uniao-institucional`, `matriculas-premium`, `matriculas-proximidade`, `matriculas-performance`, `matriculas-afeto`.
 - Eventos de captacao: `evento-open-day`, `evento-experiencia`, `evento-palestra`, `evento-imersao`.
 
 Veja [docs/modelos-lp.md](docs/modelos-lp.md) para o criterio de uso.

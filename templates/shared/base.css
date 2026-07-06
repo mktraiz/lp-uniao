@@ -474,3 +474,574 @@
           padding: var(--space-12) 0;
         }
       }
+
+      .union-shell {
+        background: #ffffff;
+        color: var(--color-foreground);
+      }
+
+      .union-hero {
+        position: relative;
+        min-height: 92dvh;
+        display: grid;
+        align-items: end;
+        padding: var(--space-8) 0 var(--space-16);
+        color: #ffffff;
+        background:
+          linear-gradient(180deg, rgb(0 0 0 / 0.18), rgb(0 0 0 / 0.18)),
+          linear-gradient(90deg, rgb(0 0 0 / 0.70), rgb(0 0 0 / 0.10)),
+          var(--hero-image, linear-gradient(135deg, var(--color-primary), #0b231f));
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+      }
+
+      .union-nav {
+        position: absolute;
+        top: var(--space-6);
+        left: 0;
+        right: 0;
+        z-index: 2;
+      }
+
+      .union-nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-6);
+      }
+
+      .union-mark {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 132px;
+        min-height: 54px;
+        padding: var(--space-3) var(--space-4);
+        border: 2px solid currentColor;
+        font-size: 1.45rem;
+        font-weight: 950;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .union-nav-links {
+        display: flex;
+        gap: var(--space-5);
+        align-items: center;
+        padding: var(--space-3) var(--space-4);
+        border: 1px solid rgb(255 255 255 / 0.26);
+        border-radius: var(--radius-lg);
+        background: rgb(0 0 0 / 0.20);
+        backdrop-filter: blur(18px);
+        font-size: var(--font-size-sm);
+        font-weight: 800;
+      }
+
+      .union-hero-copy {
+        max-width: 900px;
+        padding-top: 180px;
+      }
+
+      .union-hero-copy h1 {
+        max-width: 920px;
+        font-size: clamp(3.2rem, 8.6vw, 7.4rem);
+        line-height: 0.92;
+        text-wrap: balance;
+      }
+
+      .union-cta-band {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: var(--space-4);
+        align-items: center;
+        margin-top: var(--space-8);
+        padding: var(--space-4);
+        border-radius: var(--radius-lg);
+        background: #115996;
+        box-shadow: 0 24px 60px rgb(0 0 0 / 0.28);
+      }
+
+      .union-cta-band span {
+        padding-left: var(--space-3);
+        font-size: var(--font-size-lg);
+        font-weight: 850;
+      }
+
+      .union-cta-band .button {
+        min-width: 230px;
+        background: #ffffff;
+        color: #115996;
+        box-shadow: none;
+      }
+
+      .union-intro {
+        position: relative;
+        margin-top: -54px;
+        z-index: 2;
+      }
+
+      .union-intro-card {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.7fr);
+        gap: var(--space-10);
+        align-items: center;
+        padding: var(--space-10);
+        border-radius: var(--radius-lg);
+        background: #ffffff;
+        box-shadow: var(--shadow-panel);
+      }
+
+      .union-kicker {
+        margin-bottom: var(--space-3);
+        color: #115996;
+        font-size: var(--font-size-sm);
+        font-weight: 850;
+      }
+
+      .union-intro-card h2,
+      .union-section-head h2 {
+        color: #111111;
+      }
+
+      .union-intro-card p,
+      .union-section-head p,
+      .union-feature p {
+        color: #4e5954;
+        font-size: var(--font-size-lg);
+        line-height: var(--leading-relaxed);
+      }
+
+      .union-photo-card {
+        min-height: 360px;
+        border-radius: var(--radius-lg);
+        background:
+          linear-gradient(180deg, rgb(0 0 0 / 0.04), rgb(0 0 0 / 0.18)),
+          var(--secondary-image, linear-gradient(135deg, var(--color-primary), var(--color-accent)));
+        background-size: cover;
+        background-position: center;
+      }
+
+      .union-band {
+        padding: var(--space-20) 0;
+        background: #f5f7f1;
+      }
+
+      .union-section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 0.78fr) minmax(280px, 0.5fr);
+        gap: var(--space-8);
+        align-items: end;
+        margin-bottom: var(--space-8);
+      }
+
+      .union-features {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        background: #ffffff;
+      }
+
+      .union-features .proof-card {
+        min-height: 230px;
+        border: 0;
+        border-right: 1px solid var(--color-border);
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .union-features .proof-card:last-child {
+        border-right: 0;
+      }
+
+      .union-features .proof-card::before {
+        color: #115996;
+      }
+
+      .union-features .proof-card::after {
+        background: #f0bd2d;
+      }
+
+      .union-feature {
+        min-height: 230px;
+        padding: var(--space-6);
+        border-right: 1px solid var(--color-border);
+      }
+
+      .union-feature:last-child {
+        border-right: 0;
+      }
+
+      .union-feature strong {
+        display: block;
+        margin-bottom: var(--space-4);
+        color: #115996;
+        font-size: var(--font-size-4xl);
+        line-height: 1;
+      }
+
+      .union-form-section {
+        padding: var(--space-20) 0;
+        background:
+          linear-gradient(90deg, rgb(17 89 150 / 0.08), transparent 52%),
+          #ffffff;
+      }
+
+      .union-form-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.74fr) minmax(340px, 0.62fr);
+        gap: var(--space-10);
+        align-items: start;
+      }
+
+      .union-contact-strip {
+        display: grid;
+        gap: var(--space-3);
+        margin-top: var(--space-8);
+        color: #4e5954;
+        font-weight: 750;
+      }
+
+      .union-form-section .form-panel {
+        border-color: rgb(17 89 150 / 0.18);
+      }
+
+      @media (max-width: 900px) {
+        .union-nav-links {
+          display: none;
+        }
+
+        .union-hero {
+          min-height: 86dvh;
+          padding-bottom: var(--space-10);
+        }
+
+        .union-cta-band,
+        .union-intro-card,
+        .union-section-head,
+        .union-form-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .union-features {
+          grid-template-columns: 1fr;
+        }
+
+        .union-feature {
+          min-height: auto;
+          border-right: 0;
+          border-bottom: 1px solid var(--color-border);
+        }
+
+        .union-features .proof-card {
+          min-height: 180px;
+          border-right: 0;
+          border-bottom: 1px solid var(--color-border);
+        }
+
+        .union-features .proof-card:last-child {
+          border-bottom: 0;
+        }
+
+        .union-feature:last-child {
+          border-bottom: 0;
+        }
+
+        .union-intro-card {
+          padding: var(--space-6);
+        }
+
+        .union-cta-band .button {
+          min-width: 0;
+        }
+      }
+
+      .school-conversion {
+        background: #ffffff;
+        color: #101612;
+      }
+
+      .school-hero {
+        position: relative;
+        min-height: 100dvh;
+        padding: var(--space-8) 0 var(--space-16);
+        overflow: hidden;
+        background:
+          linear-gradient(90deg, rgb(6 18 26 / 0.88), rgb(6 18 26 / 0.54) 46%, rgb(6 18 26 / 0.14)),
+          var(--hero-image, linear-gradient(135deg, #115996, #0f6b5f));
+        background-size: cover;
+        background-position: center;
+        color: #ffffff;
+      }
+
+      .school-hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -12% -34% 42%;
+        height: 52%;
+        border-radius: 50%;
+        background: color-mix(in srgb, var(--color-accent) 70%, transparent);
+        filter: blur(80px);
+        opacity: 0.58;
+      }
+
+      .school-nav {
+        position: relative;
+        z-index: 2;
+      }
+
+      .school-nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-4);
+      }
+
+      .school-logo {
+        width: 174px;
+        height: 64px;
+        background-image: var(--logo-image);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left center;
+      }
+
+      .school-logo span {
+        display: inline-flex;
+        max-width: 180px;
+        padding: var(--space-2) var(--space-3);
+        border: 1px solid rgb(255 255 255 / 0.38);
+        border-radius: var(--radius-md);
+        background: rgb(0 0 0 / 0.18);
+        color: #ffffff;
+        font-weight: 900;
+      }
+
+      .school-logo[style*="http"] span {
+        opacity: 0;
+      }
+
+      .school-nav-cta,
+      .school-inline-link {
+        color: inherit;
+        font-weight: 850;
+        text-decoration: none;
+      }
+
+      .school-nav-cta {
+        padding: var(--space-3) var(--space-4);
+        border-radius: var(--radius-md);
+        background: rgb(255 255 255 / 0.14);
+        backdrop-filter: blur(14px);
+      }
+
+      .school-hero-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(360px, 0.58fr);
+        gap: var(--space-10);
+        align-items: end;
+        min-height: calc(100dvh - 120px);
+        padding-top: var(--space-12);
+      }
+
+      .school-hero-copy h1 {
+        max-width: 880px;
+        font-size: clamp(3.1rem, 8vw, 7.2rem);
+        line-height: 0.92;
+        text-wrap: balance;
+      }
+
+      .school-hero-copy p {
+        max-width: 670px;
+        margin-top: var(--space-5);
+        color: rgb(255 255 255 / 0.84);
+        font-size: clamp(1.15rem, 2vw, 1.5rem);
+        line-height: 1.45;
+      }
+
+      .school-proof,
+      .school-card-kicker {
+        margin-bottom: var(--space-4);
+        color: var(--color-accent);
+        font-size: var(--font-size-sm);
+        font-weight: 900;
+      }
+
+      .school-hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-3);
+        margin-top: var(--space-8);
+      }
+
+      .school-trust-row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-3);
+        max-width: 760px;
+        margin-top: var(--space-8);
+      }
+
+      .school-trust-row span {
+        min-height: 92px;
+        padding: var(--space-4);
+        border: 1px solid rgb(255 255 255 / 0.22);
+        border-radius: var(--radius-lg);
+        background: rgb(0 0 0 / 0.20);
+        color: rgb(255 255 255 / 0.78);
+        backdrop-filter: blur(14px);
+      }
+
+      .school-trust-row strong {
+        display: block;
+        color: #ffffff;
+        font-size: var(--font-size-2xl);
+        line-height: 1;
+      }
+
+      .school-lead-card {
+        padding: var(--space-6);
+        border: 1px solid rgb(255 255 255 / 0.26);
+        border-radius: var(--radius-lg);
+        background: rgb(255 255 255 / 0.94);
+        color: #101612;
+        box-shadow: 0 28px 80px rgb(0 0 0 / 0.24);
+      }
+
+      .school-lead-card h2 {
+        font-size: clamp(2rem, 3vw, 3.2rem);
+      }
+
+      .school-lead-card p {
+        margin: var(--space-3) 0 var(--space-5);
+        color: #4e5954;
+        line-height: var(--leading-normal);
+      }
+
+      .school-lead-card .hubspot-placeholder {
+        min-height: 260px;
+      }
+
+      .school-story,
+      .school-proof-section,
+      .school-segments,
+      .school-final-cta {
+        padding: var(--space-20) 0;
+      }
+
+      .school-story-grid,
+      .school-section-head,
+      .school-segments-grid,
+      .school-final-card {
+        display: grid;
+        grid-template-columns: minmax(0, 0.78fr) minmax(320px, 0.62fr);
+        gap: var(--space-10);
+        align-items: center;
+      }
+
+      .school-story-grid p {
+        color: #4e5954;
+        font-size: var(--font-size-xl);
+        line-height: var(--leading-relaxed);
+      }
+
+      .school-proof-section {
+        background: #f5f7f1;
+      }
+
+      .school-feature-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: var(--space-4);
+      }
+
+      .school-feature-grid .proof-card {
+        min-height: 250px;
+        border-color: rgb(17 89 150 / 0.16);
+      }
+
+      .school-feature-grid .proof-card::before {
+        color: #115996;
+      }
+
+      .school-feature-grid .proof-card::after {
+        background: #f0bd2d;
+      }
+
+      .school-photo {
+        min-height: 460px;
+        border-radius: var(--radius-lg);
+        background:
+          linear-gradient(180deg, transparent, rgb(0 0 0 / 0.18)),
+          var(--secondary-image, linear-gradient(135deg, #115996, #f0bd2d));
+        background-size: cover;
+        background-position: center;
+        box-shadow: var(--shadow-panel);
+      }
+
+      .school-segment-list {
+        display: grid;
+        gap: var(--space-3);
+        margin-top: var(--space-6);
+      }
+
+      .school-segment-list span {
+        padding: var(--space-4);
+        border-left: 5px solid #115996;
+        border-radius: var(--radius-md);
+        background: #f5f7f1;
+        font-weight: 850;
+      }
+
+      .school-final-cta {
+        background: #115996;
+        color: #ffffff;
+      }
+
+      .school-final-card {
+        grid-template-columns: 1fr auto;
+      }
+
+      .school-final-card .school-card-kicker {
+        color: #f0bd2d;
+      }
+
+      .school-final-card .button {
+        background: #f0bd2d;
+        color: #101612;
+      }
+
+      @media (max-width: 900px) {
+        .school-hero-grid,
+        .school-story-grid,
+        .school-section-head,
+        .school-segments-grid,
+        .school-final-card {
+          grid-template-columns: 1fr;
+        }
+
+        .school-hero {
+          min-height: auto;
+        }
+
+        .school-hero-grid {
+          min-height: auto;
+        }
+
+        .school-trust-row,
+        .school-feature-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .school-nav-cta {
+          display: none;
+        }
+
+        .school-photo {
+          min-height: 320px;
+        }
+      }

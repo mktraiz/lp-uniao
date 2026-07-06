@@ -17,6 +17,7 @@ Decisao: manter um design system proprio em CSS estatico, sem instalar shadcn, T
 
 | Modelo | Quando usar |
 | --- | --- |
+| `matriculas-uniao-institucional` | Modelo fotografico/institucional inspirado no site do Colegio Uniao, para marcas com historia, estrutura e autoridade local. |
 | `matriculas-premium` | Institucional forte, decisao familiar considerada, marca com alto valor percebido. |
 | `matriculas-proximidade` | Unidade, acolhimento, rotina escolar, visita e atendimento consultivo. |
 | `matriculas-performance` | Diferenciais, resultados, comparacao e argumentos objetivos. |
