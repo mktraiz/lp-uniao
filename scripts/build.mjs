@@ -54,6 +54,13 @@ const domainFor = (schoolConfig, lp) => {
 const textFor = (value, fallback = "") => escapeHtml(value || fallback);
 const csvValue = (value = "") => `"${String(value).replaceAll('"', '""')}"`;
 const cssUrlFor = (value = "") => String(value || "").replaceAll("\\", "").replaceAll("'", "%27").replaceAll("\"", "%22").replaceAll(")", "%29");
+const renderContentCards = (items = [], className = "school-content-card") =>
+  items
+    .map(
+      (item) =>
+        `<article class="${className}"><h3>${escapeHtml(item.title || "")}</h3><p>${escapeHtml(item.text || "")}</p></article>`
+    )
+    .join("\n            ");
 
 const hubspotFor = (appId, lp) => {
   const portalId = lp.hubspot?.portalId || "";
@@ -95,6 +102,9 @@ async function renderLp({ schoolConfig, lp, appId, pageTemplate, tokensCss, base
     state: escapeHtml(schoolConfig.school.state),
     title: escapeHtml(lp.title),
     subtitle: escapeHtml(lp.subtitle),
+    seoTitle: escapeHtml(lp.seo?.title || `${lp.title} | ${schoolConfig.school.name}`),
+    seoDescription: escapeHtml(lp.seo?.description || lp.subtitle),
+    canonicalTag: lp.seo?.canonicalUrl ? `<link rel="canonical" href="${escapeHtml(lp.seo.canonicalUrl)}">` : "",
     cta: escapeHtml(lp.cta),
     ctaHref: escapeHtml(ctaHrefFor(lp)),
     highlights,
@@ -102,6 +112,12 @@ async function renderLp({ schoolConfig, lp, appId, pageTemplate, tokensCss, base
     statValue: textFor(lp.stat?.value, lp.type === "captacao" ? "2026" : "Agenda"),
     statLabel: textFor(lp.stat?.label, lp.type === "captacao" ? "Matriculas abertas" : "Inscricoes abertas"),
     eventDate: textFor(lp.event?.dateLabel, "Em breve"),
+    introTitle: textFor(lp.intro?.title, "Conheca a escola."),
+    introText: textFor(lp.intro?.text, lp.offer || lp.subtitle),
+    missionText: textFor(lp.mission, ""),
+    address: textFor(lp.address, `${schoolConfig.school.city}/${schoolConfig.school.state}`),
+    segmentCards: renderContentCards(lp.segments || [], "school-content-card"),
+    differentialCards: renderContentCards(lp.differentials || [], "school-content-card school-content-card-strong"),
     heroImage: cssUrlFor(lp.media?.heroImage || ""),
     secondaryImage: cssUrlFor(lp.media?.secondaryImage || lp.media?.heroImage || ""),
     logoImage: cssUrlFor(lp.media?.logoImage || ""),

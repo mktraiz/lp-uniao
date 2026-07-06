@@ -758,6 +758,314 @@
         }
       }
 
+      .union-sem {
+        background: #ffffff;
+        color: #101612;
+      }
+
+      .union-sem-hero {
+        position: relative;
+        min-height: 100dvh;
+        padding: var(--space-8) 0 var(--space-16);
+        overflow: hidden;
+        color: #ffffff;
+        background:
+          linear-gradient(90deg, rgb(5 17 28 / 0.90), rgb(5 17 28 / 0.68) 44%, rgb(5 17 28 / 0.26)),
+          var(--hero-image, linear-gradient(135deg, #115996, #0f6b5f));
+        background-size: cover;
+        background-position: center;
+      }
+
+      .union-sem-hero::after {
+        content: "";
+        position: absolute;
+        right: -14%;
+        bottom: -30%;
+        width: 56%;
+        height: 56%;
+        border-radius: 50%;
+        background: color-mix(in srgb, var(--color-accent) 68%, transparent);
+        filter: blur(80px);
+        opacity: 0.58;
+      }
+
+      .union-sem-nav,
+      .union-sem-grid {
+        position: relative;
+        z-index: 1;
+      }
+
+      .union-sem-nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-4);
+      }
+
+      .union-sem-logo {
+        width: 184px;
+        height: 66px;
+        background-image: var(--logo-image);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left center;
+      }
+
+      .union-sem-logo span {
+        opacity: 0;
+      }
+
+      .union-sem-toplink,
+      .union-sem-link {
+        color: inherit;
+        font-weight: 900;
+        text-decoration: none;
+      }
+
+      .union-sem-toplink {
+        padding: var(--space-3) var(--space-4);
+        border: 1px solid rgb(255 255 255 / 0.24);
+        border-radius: var(--radius-md);
+        background: rgb(255 255 255 / 0.13);
+        backdrop-filter: blur(16px);
+      }
+
+      .union-sem-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(360px, 0.56fr);
+        gap: var(--space-10);
+        align-items: end;
+        min-height: calc(100dvh - 110px);
+        padding-top: var(--space-12);
+      }
+
+      .union-sem-copy h1 {
+        max-width: 840px;
+        font-size: clamp(3.3rem, 8vw, 7.4rem);
+        line-height: 0.92;
+      }
+
+      .union-sem-copy p {
+        max-width: 680px;
+        margin-top: var(--space-5);
+        color: rgb(255 255 255 / 0.84);
+        font-size: clamp(1.15rem, 2vw, 1.5rem);
+        line-height: 1.45;
+      }
+
+      .union-sem-kicker {
+        margin-bottom: var(--space-4);
+        color: #f0bd2d;
+        font-size: var(--font-size-sm);
+        font-weight: 950;
+      }
+
+      .union-sem-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-3);
+        margin-top: var(--space-8);
+      }
+
+      .union-sem-proofbar {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--space-3);
+        max-width: 840px;
+        margin-top: var(--space-8);
+      }
+
+      .union-sem-proofbar span {
+        min-height: 104px;
+        padding: var(--space-4);
+        border: 1px solid rgb(255 255 255 / 0.20);
+        border-radius: var(--radius-lg);
+        background: rgb(0 0 0 / 0.22);
+        color: rgb(255 255 255 / 0.78);
+        backdrop-filter: blur(16px);
+      }
+
+      .union-sem-proofbar strong {
+        display: block;
+        margin-bottom: var(--space-2);
+        color: #ffffff;
+        font-size: clamp(1.35rem, 2vw, 1.5rem);
+        line-height: 1.05;
+      }
+
+      .union-sem-form {
+        padding: var(--space-6);
+        border: 1px solid rgb(255 255 255 / 0.32);
+        border-radius: var(--radius-lg);
+        background: rgb(255 255 255 / 0.96);
+        color: #101612;
+        box-shadow: 0 28px 80px rgb(0 0 0 / 0.26);
+      }
+
+      .union-sem-form h2 {
+        font-size: clamp(1.9rem, 3vw, 3rem);
+      }
+
+      .union-sem-form p {
+        margin: var(--space-3) 0 var(--space-5);
+        color: #4e5954;
+        line-height: var(--leading-normal);
+      }
+
+      .union-sem-form .hubspot-placeholder {
+        min-height: 250px;
+      }
+
+      .union-sem-intro,
+      .union-sem-section,
+      .union-sem-final {
+        padding: var(--space-20) 0;
+      }
+
+      .union-sem-intro-grid,
+      .union-sem-section-head,
+      .union-sem-diff-grid,
+      .union-sem-final-card {
+        display: grid;
+        grid-template-columns: minmax(0, 0.78fr) minmax(320px, 0.62fr);
+        gap: var(--space-10);
+        align-items: center;
+      }
+
+      .union-sem-intro-grid p {
+        margin-bottom: var(--space-5);
+        color: #4e5954;
+        font-size: var(--font-size-xl);
+        line-height: var(--leading-relaxed);
+      }
+
+      .union-sem-section-light {
+        background: #f5f7f1;
+      }
+
+      .union-sem-section-head {
+        margin-bottom: var(--space-8);
+      }
+
+      .union-sem-link {
+        justify-self: end;
+        color: #115996;
+      }
+
+      .union-sem-card-grid {
+        display: grid;
+        gap: var(--space-4);
+      }
+
+      .union-sem-card-grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .school-content-card {
+        min-height: 260px;
+        padding: var(--space-6);
+        border: 1px solid rgb(17 89 150 / 0.14);
+        border-radius: var(--radius-lg);
+        background: #ffffff;
+        box-shadow: 0 14px 44px rgb(16 22 18 / 0.06);
+      }
+
+      .school-content-card h3 {
+        margin: 0 0 var(--space-4);
+        color: #115996;
+        font-size: var(--font-size-2xl);
+        line-height: 1.08;
+      }
+
+      .school-content-card p {
+        color: #4e5954;
+        line-height: var(--leading-relaxed);
+      }
+
+      .union-sem-diff-grid {
+        grid-template-columns: minmax(320px, 0.64fr) minmax(0, 0.9fr);
+        align-items: start;
+      }
+
+      .union-sem-photo {
+        position: sticky;
+        top: var(--space-6);
+        min-height: 620px;
+        border-radius: var(--radius-lg);
+        background:
+          linear-gradient(180deg, transparent, rgb(0 0 0 / 0.22)),
+          var(--secondary-image, linear-gradient(135deg, #115996, #f0bd2d));
+        background-size: cover;
+        background-position: center;
+        box-shadow: var(--shadow-panel);
+      }
+
+      .union-sem-card-list {
+        display: grid;
+        gap: var(--space-4);
+        margin-top: var(--space-6);
+      }
+
+      .union-sem-card-list .school-content-card {
+        min-height: auto;
+      }
+
+      .school-content-card-strong h3 {
+        color: #101612;
+      }
+
+      .union-sem-final {
+        background: #115996;
+        color: #ffffff;
+      }
+
+      .union-sem-final-card {
+        grid-template-columns: 1fr auto;
+      }
+
+      .union-sem-final .button {
+        background: #f0bd2d;
+        color: #101612;
+      }
+
+      @media (max-width: 900px) {
+        .union-sem-hero {
+          min-height: auto;
+          padding-bottom: var(--space-10);
+        }
+
+        .union-sem-grid,
+        .union-sem-intro-grid,
+        .union-sem-section-head,
+        .union-sem-diff-grid,
+        .union-sem-final-card {
+          grid-template-columns: 1fr;
+        }
+
+        .union-sem-grid {
+          min-height: auto;
+        }
+
+        .union-sem-proofbar,
+        .union-sem-card-grid-3 {
+          grid-template-columns: 1fr;
+        }
+
+        .union-sem-toplink {
+          display: none;
+        }
+
+        .union-sem-photo {
+          position: relative;
+          top: auto;
+          min-height: 340px;
+        }
+
+        .union-sem-link {
+          justify-self: start;
+        }
+      }
+
       .school-conversion {
         background: #ffffff;
         color: #101612;

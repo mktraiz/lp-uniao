@@ -43,16 +43,63 @@
       "category": "Matriculas",
       "type": "captacao",
       "model": "matriculas-uniao-institucional",
-      "title": "Referencia em educacao para novas geracoes",
-      "subtitle": "Uma escola com historia, estrutura e acompanhamento proximo para cada etapa da vida escolar.",
-      "cta": "Agendar uma visita",
-      "offer": "Somos uma instituicao que une tradicao, modernidade e formacao humana para preparar alunos para os desafios do presente e do futuro.",
-      "stat": { "value": "155 anos", "label": "Tradicao educacional" },
+      "title": "Matriculas abertas no Colegio Uniao",
+      "subtitle": "Ensino Fundamental ao Ensino Medio em Uruguaiana, com tradicao, ensino atualizado e formacao integral.",
+      "cta": "Quero agendar uma visita",
+      "seo": {
+        "title": "Matriculas abertas no Colegio Uniao em Uruguaiana",
+        "description": "Agende uma visita ao Colegio Uniao. Ensino Fundamental e Ensino Medio em Uruguaiana, com 155 anos de tradicao, ensino bilingue e formacao integral.",
+        "canonicalUrl": "https://colegiouniao.com.br/matriculas/"
+      },
+      "intro": {
+        "title": "Somos um colegio de referencia na formacao de liderancas na fronteira gaucha.",
+        "text": "Integramos modernidade e tradicao em uma trajetoria educacional que atende estudantes do Ensino Fundamental ao Ensino Medio."
+      },
+      "mission": "Nossa missao e oferecer uma educacao inovadora e de excelencia, capaz de transformar realidades e contribuir para a formacao integral do ser humano, fundamentada em valores eticos e cristaos.",
+      "address": "Rua Tiradentes, 3.432 - Centro, Uruguaiana/RS",
+      "offer": "A partir de 2025, fazemos parte da Raiz Educacao, grupo educacional que une o melhor da educacao a praticas de gestao empresarial modernas e atuais.",
+      "stat": { "value": "155 anos", "label": "Educando geracoes com excelencia" },
       "media": {
         "logoImage": "https://colegiouniao.com.br/_next/image/?url=https%3A%2F%2Fcms.raizeducacao.com.br%2Funiaofinal%2Fwp-content%2Fuploads%2Fsites%2F25%2F2024%2F12%2FMonocromatica-positiva.png&w=384&q=95",
-        "heroImage": "https://colegiouniao.com.br/_next/image/?url=https%3A%2F%2Fcms.raizeducacao.com.br%2Funiaofinal%2Fwp-content%2Fuploads%2Fsites%2F25%2F2025%2F08%2FDSC04964-2048x707.png&w=1920&q=75",
+        "heroImage": "https://colegiouniao.com.br/_next/image/?url=https%3A%2F%2Fcms.raizeducacao.com.br%2Funiaofinal%2Fwp-content%2Fuploads%2Fsites%2F25%2F2025%2F07%2FLanding-page-2048x852.png&w=1920&q=75",
         "secondaryImage": "https://colegiouniao.com.br/_next/image/?url=https%3A%2F%2Fcms.raizeducacao.com.br%2Funiaofinal%2Fwp-content%2Fuploads%2Fsites%2F25%2F2025%2F07%2FMG_5714-1024x682.png&w=1080&q=75"
       },
+      "segments": [
+        {
+          "title": "Ensino Fundamental Anos Iniciais",
+          "text": "Formacao com base em valores, autonomia e respeito ao ritmo de cada crianca, incentivando curiosidade, senso critico e atitudes eticas."
+        },
+        {
+          "title": "Ensino Fundamental Anos Finais",
+          "text": "Aprofundamento dos conhecimentos e desenvolvimento da autonomia intelectual, com formacao cidada e pensamento critico."
+        },
+        {
+          "title": "Ensino Medio",
+          "text": "Educacao voltada ao projeto de vida, unindo conhecimento academico, formacao etica e visao social."
+        }
+      ],
+      "differentials": [
+        {
+          "title": "Ensino bilingue",
+          "text": "Primeiro e unico colegio com ensino bilingue de Uruguaiana, com aulas de ingles a partir do 1o ano e metodologia internacional."
+        },
+        {
+          "title": "Tradicao centenaria com ensino atualizado",
+          "text": "155 anos de historia educando geracoes com excelencia, aliando legado institucional a praticas pedagogicas modernas."
+        },
+        {
+          "title": "Formacao de lideres",
+          "text": "Projetos que desenvolvem autonomia, responsabilidade e participacao ativa em temas sociais, academicos e comunitarios."
+        },
+        {
+          "title": "Programa socioemocional",
+          "text": "Competencias socioemocionais trabalhadas de forma continua, com empatia, responsabilidade, cooperacao e autoconhecimento."
+        },
+        {
+          "title": "Atividades extracurriculares",
+          "text": "Modalidades esportivas e culturais que estimulam habilidades, disciplina, convivencia e desenvolvimento integral."
+        }
+      ],
       "highlights": ["Ensino bilingue desde os primeiros anos", "Tradicao centenaria com ensino atualizado", "Formacao de liderancas e protagonismo juvenil", "Ambiente acolhedor, seguro e com estrutura completa"],
       "hubspot": { "region": "na1", "portalId": "", "formId": "" }
     },
