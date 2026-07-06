@@ -5,6 +5,7 @@ const root = process.cwd();
 const schoolsDir = path.join(root, "content", "schools");
 const templatePath = path.join(root, "templates", "base.html");
 const distDir = path.join(root, "dist");
+const allDir = path.join(distDir, "apps", "all");
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -33,23 +34,29 @@ const ctaHrefFor = (lp) => {
   return "#contato";
 };
 
+const appIdFor = (schoolConfig, lp) =>
+  lp.appId || `${schoolConfig.brand.slug}--${schoolConfig.school.slug}--${lp.type}`;
+
 async function build() {
   const template = await fs.readFile(templatePath, "utf8");
   await fs.rm(distDir, { recursive: true, force: true });
-  await fs.mkdir(distDir, { recursive: true });
+  await fs.mkdir(allDir, { recursive: true });
 
   const files = (await fs.readdir(schoolsDir)).filter((file) => file.endsWith(".json"));
+  const manifest = [];
 
   for (const file of files) {
     const schoolConfig = JSON.parse(await fs.readFile(path.join(schoolsDir, file), "utf8"));
 
     for (const lp of schoolConfig.lps) {
+      const appId = appIdFor(schoolConfig, lp);
       const pageDir = path.join(
-        distDir,
+        allDir,
         schoolConfig.brand.slug,
         schoolConfig.school.slug,
         lp.type
       );
+      const appDir = path.join(distDir, "apps", appId);
 
       const highlights = (lp.highlights || [])
         .map((item) => `<div class="item">${escapeHtml(item)}</div>`)
@@ -71,15 +78,29 @@ async function build() {
 
       await fs.mkdir(pageDir, { recursive: true });
       await fs.writeFile(path.join(pageDir, "index.html"), html);
+      await fs.mkdir(appDir, { recursive: true });
+      await fs.writeFile(path.join(appDir, "index.html"), html);
+
+      manifest.push({
+        appId,
+        type: lp.type,
+        brand: schoolConfig.brand.name,
+        brandSlug: schoolConfig.brand.slug,
+        school: schoolConfig.school.name,
+        schoolSlug: schoolConfig.school.slug,
+        route: `/${schoolConfig.brand.slug}/${schoolConfig.school.slug}/${lp.type}/`,
+        dist: `dist/apps/${appId}`
+      });
     }
   }
 
   await fs.writeFile(
-    path.join(distDir, "index.html"),
+    path.join(allDir, "index.html"),
     "<!doctype html><html lang=\"pt-BR\"><meta charset=\"utf-8\"><title>LPs RAIZ Educacao</title><body><h1>LPs RAIZ Educacao</h1><p>Build gerado com sucesso.</p></body></html>"
   );
+  await fs.writeFile(path.join(distDir, "apps-manifest.json"), `${JSON.stringify(manifest, null, 2)}\n`);
 
-  console.log(`Build finalizado: ${files.length} escola(s) processada(s).`);
+  console.log(`Build finalizado: ${manifest.length} LP(s) em ${files.length} escola(s).`);
 }
 
 build().catch((error) => {

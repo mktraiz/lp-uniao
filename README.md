@@ -18,7 +18,8 @@ templates/              HTML base usado pelo gerador estatico
 scripts/                Automacoes para criar escolas e gerar o build
 deploy/
   easypanel/            Arquivos e notas de publicacao na VPS
-dist/                   Saida gerada para publicacao
+dist/
+  apps/                 Saida gerada por aplicativo de LP
 ```
 
 ## Fluxo recomendado
@@ -27,7 +28,7 @@ dist/                   Saida gerada para publicacao
 2. Crie a pasta da escola a partir de `landing-pages/marcas/_template`.
 3. Preencha os briefs das duas LPs.
 4. Rode `npm run build`.
-5. Publique o projeto no EasyPanel usando o `Dockerfile` da raiz.
+5. Publique cada LP como um aplicativo separado no EasyPanel usando o `Dockerfile` da raiz.
 
 ## Comandos
 
@@ -37,11 +38,40 @@ npm run build
 npm run serve
 ```
 
-O build gera os arquivos finais em `dist/`.
+O build gera os arquivos finais em `dist/apps/`.
 
-## Padrao de URL
+Cada LP recebe um `appId` no formato:
 
-Cada LP sera publicada neste formato:
+```text
+<marca>--<escola>--<tipo-da-lp>
+```
+
+Exemplo:
+
+```text
+marca-exemplo--colegio-exemplo--captacao
+marca-exemplo--colegio-exemplo--campanha
+```
+
+## Publicacao no EasyPanel
+
+Cada LP deve virar um app separado na VPS.
+
+No app do EasyPanel, use o mesmo repositorio e configure o build arg:
+
+```text
+LP_APP_ID=<appId-da-lp>
+```
+
+Exemplo para a LP de captacao:
+
+```text
+LP_APP_ID=marca-exemplo--colegio-exemplo--captacao
+```
+
+## Padrao interno de URL
+
+Quando o build completo for servido localmente, as LPs tambem ficam disponiveis neste formato:
 
 ```text
 /<marca>/<escola>/captacao/
