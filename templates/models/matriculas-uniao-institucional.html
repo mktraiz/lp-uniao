@@ -1,113 +1,183 @@
-    <main class="union-sem" style="--hero-image: url('{{heroImage}}'); --secondary-image: url('{{secondaryImage}}');">
-      <section id="formulario" class="union-sem-hero">
-        <nav class="union-sem-nav">
-          <div class="wrap union-sem-nav-inner">
-            <div class="union-sem-logo" style="--logo-image: url('{{logoImage}}');"><span>{{schoolName}}</span></div>
-            <a class="union-sem-toplink" href="#formulario">Agendar visita</a>
+    <main class="union-sem union-horizon" style="--hero-image: url('{{heroImage}}'); --secondary-image: url('{{secondaryImage}}');">
+      <section id="formulario" class="union-horizon-hero" data-scene>
+        <nav class="union-horizon-nav">
+          <div class="wrap union-horizon-nav-inner">
+            <div class="union-horizon-logo" style="--logo-image: url('{{logoImage}}');"><span>{{schoolName}}</span></div>
+            <div class="union-horizon-nav-links">
+              <a href="#segmentos">Segmentos</a>
+              <a href="#diferenciais">Diferenciais</a>
+              <a href="#visita">Visita</a>
+            </div>
+            <a class="union-horizon-nav-cta" href="#visita">Agendar visita</a>
           </div>
         </nav>
 
-        <div class="wrap union-sem-grid">
-          <div class="union-sem-copy">
-            <div class="union-sem-kicker">Matriculas abertas em Uruguaiana</div>
+        <div class="wrap union-horizon-hero-grid">
+          <div class="union-horizon-copy reveal">
+            <span class="union-horizon-eyebrow">Do Fundamental ao Ensino Medio</span>
             <h1>{{title}}</h1>
             <p>{{subtitle}}</p>
-            <div class="union-sem-actions">
-              <a class="button" href="#formulario">{{cta}}</a>
+            <div class="union-horizon-actions">
+              <a class="button" href="#visita">{{cta}}</a>
               <a class="button button-secondary" href="#segmentos">Conhecer segmentos</a>
             </div>
-            <div class="union-sem-search-tags">
-              <span>Ensino Fundamental</span>
-              <span>Ensino Medio</span>
-              <span>Ensino bilingue</span>
-            </div>
           </div>
 
-          <aside id="formulario-card" class="union-sem-form">
-            <div class="union-sem-form-top">
-              <div class="union-sem-kicker">Agende sua visita</div>
-              <span>Retorno da equipe de matriculas</span>
-            </div>
-            <h2>Veja se o Uniao faz sentido para sua familia.</h2>
-            <p>Preencha o formulario para tirar duvidas sobre vagas, segmentos, rotina escolar e proximos passos.</p>
-            <div class="union-sem-form-promises union-sem-form-promises-compact">
-              <span>Atendimento consultivo</span>
-              <span>Visita guiada</span>
-            </div>
-            {{hubspotForm}}
-          </aside>
+          <div class="union-horizon-scene reveal" aria-label="Imagem do Colegio Uniao">
+            <div class="union-horizon-photo"></div>
+            <span class="union-horizon-float union-horizon-float-1">Ensino bilingue</span>
+            <span class="union-horizon-float union-horizon-float-2">155 anos</span>
+            <span class="union-horizon-float union-horizon-float-3">Formacao integral</span>
+          </div>
+        </div>
+
+        <div class="wrap union-horizon-proof-dock reveal">
+          <article>
+            <strong>{{statValue}}</strong>
+            <span>{{statLabel}}</span>
+          </article>
+          <article>
+            <strong>Raiz Educacao</strong>
+            <span>Gestao moderna com legado escolar</span>
+          </article>
+          <article>
+            <strong>Centro de Uruguaiana</strong>
+            <span>{{address}}</span>
+          </article>
+          <article>
+            <strong>Visita guiada</strong>
+            <span>Atendimento para tirar duvidas da familia</span>
+          </article>
         </div>
       </section>
 
-      <section class="union-sem-proof-strip">
-        <div class="wrap union-sem-proofbar">
-          <span><strong>{{statValue}}</strong>{{statLabel}}</span>
-          <span><strong>Raiz Educacao</strong>Gestao educacional moderna</span>
-          <span><strong>Centro de Uruguaiana</strong>{{address}}</span>
-        </div>
-      </section>
-
-      <section class="union-sem-intro">
-        <div class="wrap union-sem-intro-grid">
-          <div>
-            <div class="union-sem-kicker">Ha 155 anos somos Unionitas</div>
+      <section class="union-horizon-section union-horizon-intro">
+        <div class="wrap union-horizon-intro-grid">
+          <div class="reveal">
+            <span class="union-horizon-eyebrow">Por que escolher o Colegio Uniao?</span>
             <h2>{{introTitle}}</h2>
           </div>
-          <div>
+          <div class="union-horizon-text reveal">
             <p>{{introText}}</p>
             <p>{{missionText}}</p>
           </div>
         </div>
       </section>
 
-      <section class="union-sem-decision">
-        <div class="wrap union-sem-decision-grid">
-          <div class="union-sem-decision-card">
-            <strong>Para familias que buscam tradicao sem abrir mao de atualizacao.</strong>
-            <span>O conteudo da pagina foi reorganizado para responder rapido as duvidas que aparecem em campanhas de matricula.</span>
-          </div>
-          <div class="union-sem-decision-card">
-            <strong>Para quem quer comparar escola, proposta e proximo passo.</strong>
-            <span>Segmentos, diferenciais e formulario aparecem em uma ordem pensada para conversao.</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="segmentos" class="union-sem-section union-sem-section-light">
+      <section id="segmentos" class="union-horizon-section union-horizon-cards-section">
         <div class="wrap">
-          <div class="union-sem-section-head">
-            <div>
-              <div class="union-sem-kicker">Segmentos</div>
-              <h2>Do Ensino Fundamental ao Ensino Medio.</h2>
-            </div>
-            <a class="union-sem-link" href="#formulario">Quero agendar uma visita</a>
+          <div class="union-horizon-section-title reveal">
+            <span class="union-horizon-eyebrow">Segmentos</span>
+            <h2>Uma jornada completa de aprendizagem.</h2>
+            <p>Da base academica ao projeto de vida, a experiencia escolar acompanha cada fase com proximidade.</p>
           </div>
-          <div class="union-sem-card-grid union-sem-card-grid-3">
+          <div class="union-horizon-card-grid union-horizon-card-grid-3">
             {{segmentCards}}
           </div>
         </div>
       </section>
 
-      <section id="diferenciais" class="union-sem-section">
-        <div class="wrap union-sem-diff-grid">
-          <div class="union-sem-photo"></div>
-          <div>
-            <div class="union-sem-kicker">Diferenciais</div>
-            <h2>Muito alem do curriculo tradicional.</h2>
-            <div class="union-sem-card-list">
-              {{differentialCards}}
-            </div>
+      <section id="diferenciais" class="union-horizon-tour">
+        <div class="wrap union-horizon-tour-grid">
+          <div class="union-horizon-tour-copy reveal">
+            <span class="union-horizon-eyebrow">Diferenciais</span>
+            <h2>Ambientes e escolhas pedagogicas que conectam.</h2>
+            <p>O Colegio Uniao combina tradicao, ensino bilingue, formacao socioemocional e uma rotina pensada para desenvolvimento integral.</p>
+            <a class="button" href="#visita">Fazer um tour virtual</a>
+          </div>
+          <div class="union-horizon-tour-image reveal">
+            <div class="union-horizon-tour-photo"></div>
           </div>
         </div>
       </section>
 
-      <section class="union-sem-final">
-        <div class="wrap union-sem-final-card">
-          <div>
-            <div class="union-sem-kicker">Proximo passo</div>
-            <h2>Agende uma visita e conheca o Colegio Uniao de perto.</h2>
+      <section class="union-horizon-section union-horizon-diff-section">
+        <div class="wrap">
+          <div class="union-horizon-section-title reveal">
+            <span class="union-horizon-eyebrow">Muito alem do ensino</span>
+            <h2>Motivos claros para decidir com seguranca.</h2>
           </div>
-          <a class="button" href="#formulario">Agendar visita</a>
+          <div class="union-horizon-card-grid union-horizon-card-grid-5">
+            {{differentialCards}}
+          </div>
         </div>
       </section>
+
+      <section class="union-horizon-family">
+        <div class="wrap union-horizon-family-grid">
+          <div class="union-horizon-family-card reveal">
+            <span>01</span>
+            <strong>Compare proposta, rotina e valores.</strong>
+            <p>A LP conduz a familia pela decisao antes de pedir o contato, reduzindo duvidas no formulario.</p>
+          </div>
+          <div class="union-horizon-family-card reveal">
+            <span>02</span>
+            <strong>Leve a familia para a visita.</strong>
+            <p>O CTA prioriza agendamento, que costuma ser o passo mais forte para matriculas escolares.</p>
+          </div>
+          <div class="union-horizon-family-card reveal">
+            <span>03</span>
+            <strong>Reforce marca e confianca.</strong>
+            <p>Logo, historia, endereco e argumentos aparecem com hierarquia visual sem poluir a primeira dobra.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="visita" class="union-horizon-lead">
+        <div class="wrap union-horizon-lead-grid">
+          <div class="union-horizon-lead-copy reveal">
+            <span class="union-horizon-eyebrow">Proximo passo</span>
+            <h2>Vamos construir o proximo capitulo da vida escolar?</h2>
+            <p>Agende uma visita e conheca de perto a proposta do Colegio Uniao para sua familia.</p>
+          </div>
+          <aside id="formulario-card" class="union-horizon-form reveal">
+            <div class="union-horizon-form-head">
+              <strong>Agende sua visita</strong>
+              <span>Retorno da equipe de matriculas</span>
+            </div>
+            {{hubspotForm}}
+          </aside>
+        </div>
+      </section>
+
+      <footer class="union-horizon-footer">
+        <div class="wrap union-horizon-footer-grid">
+          <div class="union-horizon-logo union-horizon-logo-footer" style="--logo-image: url('{{logoImage}}');"><span>{{schoolName}}</span></div>
+          <p>{{address}}</p>
+          <a href="#visita">Agendar visita</a>
+        </div>
+      </footer>
+
+      <script>
+        (() => {
+          const root = document.querySelector("[data-scene]");
+          const revealItems = document.querySelectorAll(".union-horizon .reveal, .union-horizon .school-content-card");
+
+          if (root && window.matchMedia("(pointer: fine)").matches) {
+            root.addEventListener("pointermove", (event) => {
+              const rect = root.getBoundingClientRect();
+              const x = ((event.clientX - rect.left) / rect.width - 0.5).toFixed(3);
+              const y = ((event.clientY - rect.top) / rect.height - 0.5).toFixed(3);
+              root.style.setProperty("--mx", x);
+              root.style.setProperty("--my", y);
+            });
+          }
+
+          if (!("IntersectionObserver" in window)) {
+            revealItems.forEach((item) => item.classList.add("is-visible"));
+            return;
+          }
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.18 });
+
+          revealItems.forEach((item) => observer.observe(item));
+        })();
+      </script>
     </main>
