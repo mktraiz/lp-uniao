@@ -1,7 +1,8 @@
 {
   "brand": {
     "name": "Marca Exemplo",
-    "slug": "marca-exemplo"
+    "slug": "marca-exemplo",
+    "domain": "marcaexemplo.com.br"
   },
   "school": {
     "name": "Colegio Exemplo",
@@ -18,6 +19,11 @@
       "title": "Matriculas abertas no Colegio Exemplo",
       "subtitle": "Conheca uma escola completa para o desenvolvimento do seu filho.",
       "cta": "Quero falar com a escola",
+      "domain": {
+        "subdomain": "matriculas",
+        "primary": "matriculas.marcaexemplo.com.br",
+        "aliases": []
+      },
       "whatsapp": "",
       "formId": "",
       "highlights": [
@@ -31,6 +37,11 @@
       "title": "Agende uma visita ao Colegio Exemplo",
       "subtitle": "Veja de perto a rotina, os espacos e a proposta pedagogica.",
       "cta": "Agendar visita",
+      "domain": {
+        "subdomain": "bolsao",
+        "primary": "bolsao.marcaexemplo.com.br",
+        "aliases": []
+      },
       "whatsapp": "",
       "formId": "",
       "highlights": [

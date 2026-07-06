@@ -37,6 +37,15 @@ const ctaHrefFor = (lp) => {
 const appIdFor = (schoolConfig, lp) =>
   lp.appId || `${schoolConfig.brand.slug}--${schoolConfig.school.slug}--${lp.type}`;
 
+const domainFor = (schoolConfig, lp) => {
+  if (lp.domain?.primary) return lp.domain.primary;
+  if (lp.domain?.subdomain && schoolConfig.brand.domain) {
+    return `${lp.domain.subdomain}.${schoolConfig.brand.domain}`;
+  }
+
+  return "";
+};
+
 async function build() {
   const template = await fs.readFile(templatePath, "utf8");
   await fs.rm(distDir, { recursive: true, force: true });
@@ -86,8 +95,11 @@ async function build() {
         type: lp.type,
         brand: schoolConfig.brand.name,
         brandSlug: schoolConfig.brand.slug,
+        brandDomain: schoolConfig.brand.domain || "",
         school: schoolConfig.school.name,
         schoolSlug: schoolConfig.school.slug,
+        primaryDomain: domainFor(schoolConfig, lp),
+        domainAliases: lp.domain?.aliases || [],
         route: `/${schoolConfig.brand.slug}/${schoolConfig.school.slug}/${lp.type}/`,
         dist: `dist/apps/${appId}`
       });

@@ -22,7 +22,10 @@ Health check:
 /
 
 Dominio:
-<dominio-ou-subdominio-da-lp>
+<primaryDomain-da-lp>
+
+Aliases:
+<domainAliases-da-lp-se-houver>
 ```
 
 Exemplo:
@@ -33,4 +36,7 @@ lp-colegio-exemplo-captacao
 
 Build arg:
 LP_APP_ID=marca-exemplo--colegio-exemplo--captacao
+
+Dominio:
+matriculas.marcaexemplo.com.br
 ```

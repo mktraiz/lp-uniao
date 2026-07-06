@@ -13,6 +13,8 @@ Cada arquivo representa uma escola e contem:
 - textos principais;
 - CTA;
 - destaques.
+- dominio principal da LP;
+- aliases de dominio, quando houver.
 
 ## Producao
 
@@ -46,4 +48,13 @@ Exemplo:
 
 ```text
 LP_APP_ID=marca-exemplo--colegio-exemplo--captacao
+```
+
+O dominio de cada app vem do campo `lps[].domain.primary`.
+
+Exemplos:
+
+```text
+bolsao.matrizeducacao.com.br
+matriculas.apogeu.com.br
 ```

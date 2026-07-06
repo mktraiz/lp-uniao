@@ -11,6 +11,7 @@ Cada LP deve ser cadastrada como um aplicativo separado no EasyPanel.
 - Dockerfile: `Dockerfile` na raiz do projeto.
 - Build command: nao precisa configurar; o Dockerfile roda `npm run build`.
 - Build arg obrigatorio por LP: `LP_APP_ID=<appId-da-lp>`.
+- Dominios: usar o `primaryDomain` gerado no manifesto.
 - Health check path: `/`.
 
 ## Publicacao
@@ -36,6 +37,12 @@ Build arg: LP_APP_ID=marca-exemplo--colegio-exemplo--campanha
 
 O manifesto gerado em `dist/apps-manifest.json` lista todos os apps de LP disponiveis.
 
+Cada item do manifesto inclui:
+
+- `appId`: valor para o build arg `LP_APP_ID`.
+- `primaryDomain`: dominio principal para cadastrar no app.
+- `domainAliases`: dominios extras para apontar para o mesmo app.
+
 Quando o build completo for servido localmente pelo app `all`, as paginas tambem seguem:
 
 ```text
@@ -44,3 +51,16 @@ Quando o build completo for servido localmente pelo app `all`, as paginas tambem
 ```
 
 Em producao, cada app deve servir sua LP diretamente em `/`.
+
+## Dominios por marca
+
+Use um dominio/subdominio por LP, mantendo o dominio da marca.
+
+Exemplos:
+
+```text
+bolsao.matrizeducacao.com.br
+matriculas.apogeu.com.br
+```
+
+No DNS, cada subdominio deve apontar para a VPS ou para o endpoint indicado pelo EasyPanel.

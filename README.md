@@ -27,8 +27,9 @@ dist/
 1. Cadastre a escola em `content/schools/<slug-da-escola>.json`.
 2. Crie a pasta da escola a partir de `landing-pages/marcas/_template`.
 3. Preencha os briefs das duas LPs.
-4. Rode `npm run build`.
-5. Publique cada LP como um aplicativo separado no EasyPanel usando o `Dockerfile` da raiz.
+4. Defina o dominio principal de cada LP em `lps[].domain.primary`.
+5. Rode `npm run build`.
+6. Publique cada LP como um aplicativo separado no EasyPanel usando o `Dockerfile` da raiz.
 
 ## Comandos
 
@@ -53,6 +54,8 @@ marca-exemplo--colegio-exemplo--captacao
 marca-exemplo--colegio-exemplo--campanha
 ```
 
+O manifesto `dist/apps-manifest.json` lista o `appId`, o dominio principal e os aliases de cada LP.
+
 ## Publicacao no EasyPanel
 
 Cada LP deve virar um app separado na VPS.
@@ -67,6 +70,15 @@ Exemplo para a LP de captacao:
 
 ```text
 LP_APP_ID=marca-exemplo--colegio-exemplo--captacao
+```
+
+Depois, configure no EasyPanel o dominio principal que aparece em `primaryDomain`.
+
+Exemplos de estrategia:
+
+```text
+bolsao.matrizeducacao.com.br
+matriculas.apogeu.com.br
 ```
 
 ## Padrao interno de URL
