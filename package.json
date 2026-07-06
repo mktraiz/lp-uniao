@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
+    "start": "node scripts/start.mjs",
     "serve": "npx serve dist",
     "preview": "npm run build && npx serve dist",
     "new:school": "node scripts/new-school.mjs"
