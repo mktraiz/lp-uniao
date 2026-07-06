@@ -832,17 +832,18 @@
 
       .union-sem-grid {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(360px, 0.56fr);
-        gap: var(--space-10);
-        align-items: end;
+        grid-template-columns: minmax(0, 0.96fr) minmax(380px, 0.54fr);
+        gap: var(--space-12);
+        align-items: center;
         min-height: calc(100dvh - 110px);
         padding-top: var(--space-12);
       }
 
       .union-sem-copy h1 {
         max-width: 840px;
-        font-size: clamp(3.3rem, 8vw, 7.4rem);
-        line-height: 0.92;
+        font-size: clamp(3.15rem, 7.2vw, 6.8rem);
+        line-height: 0.94;
+        text-wrap: balance;
       }
 
       .union-sem-copy p {
@@ -867,12 +868,30 @@
         margin-top: var(--space-8);
       }
 
+      .union-sem-search-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+        margin-top: var(--space-5);
+      }
+
+      .union-sem-search-tags span {
+        padding: var(--space-2) var(--space-3);
+        border: 1px solid rgb(255 255 255 / 0.22);
+        border-radius: var(--radius-md);
+        background: rgb(255 255 255 / 0.10);
+        color: rgb(255 255 255 / 0.86);
+        font-size: var(--font-size-sm);
+        font-weight: 800;
+        backdrop-filter: blur(12px);
+      }
+
       .union-sem-proofbar {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: var(--space-3);
         max-width: 840px;
-        margin-top: var(--space-8);
+        margin-top: var(--space-6);
       }
 
       .union-sem-proofbar span {
@@ -897,13 +916,38 @@
         padding: var(--space-6);
         border: 1px solid rgb(255 255 255 / 0.32);
         border-radius: var(--radius-lg);
-        background: rgb(255 255 255 / 0.96);
+        background:
+          linear-gradient(180deg, rgb(255 255 255 / 0.98), rgb(255 255 255 / 0.92)),
+          #ffffff;
         color: #101612;
         box-shadow: 0 28px 80px rgb(0 0 0 / 0.26);
+        backdrop-filter: blur(18px);
+      }
+
+      .union-sem-form-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-3);
+        margin-bottom: var(--space-4);
+      }
+
+      .union-sem-form-top .union-sem-kicker {
+        margin-bottom: 0;
+      }
+
+      .union-sem-form-top span {
+        max-width: 160px;
+        color: #62706a;
+        font-size: var(--font-size-sm);
+        font-weight: 800;
+        line-height: 1.25;
+        text-align: right;
       }
 
       .union-sem-form h2 {
-        font-size: clamp(1.9rem, 3vw, 3rem);
+        font-size: clamp(2rem, 3vw, 3.2rem);
+        line-height: 1;
       }
 
       .union-sem-form p {
@@ -914,6 +958,22 @@
 
       .union-sem-form .hubspot-placeholder {
         min-height: 250px;
+      }
+
+      .union-sem-form-promises {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--space-2);
+        margin-bottom: var(--space-5);
+      }
+
+      .union-sem-form-promises span {
+        padding: var(--space-3);
+        border-radius: var(--radius-md);
+        background: #f5f7f1;
+        color: #2c3833;
+        font-size: var(--font-size-sm);
+        font-weight: 850;
       }
 
       .union-sem-intro,
@@ -941,6 +1001,44 @@
 
       .union-sem-section-light {
         background: #f5f7f1;
+      }
+
+      .union-sem-decision {
+        padding: 0 0 var(--space-20);
+        background: #ffffff;
+      }
+
+      .union-sem-decision-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-4);
+      }
+
+      .union-sem-decision-card {
+        min-height: 220px;
+        display: grid;
+        align-content: space-between;
+        padding: var(--space-8);
+        border-radius: var(--radius-lg);
+        background: #115996;
+        color: #ffffff;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .union-sem-decision-card:nth-child(2) {
+        background: #101612;
+      }
+
+      .union-sem-decision-card strong {
+        max-width: 560px;
+        font-size: clamp(1.7rem, 3vw, 2.5rem);
+        line-height: 1.05;
+      }
+
+      .union-sem-decision-card span {
+        max-width: 58ch;
+        color: rgb(255 255 255 / 0.74);
+        line-height: var(--leading-normal);
       }
 
       .union-sem-section-head {
@@ -1047,7 +1145,8 @@
         }
 
         .union-sem-proofbar,
-        .union-sem-card-grid-3 {
+        .union-sem-card-grid-3,
+        .union-sem-decision-grid {
           grid-template-columns: 1fr;
         }
 
@@ -1064,6 +1163,7 @@
         .union-sem-link {
           justify-self: start;
         }
+
       }
 
       .school-conversion {
