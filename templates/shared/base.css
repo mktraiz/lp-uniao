@@ -765,8 +765,8 @@
 
       .union-sem-hero {
         position: relative;
-        min-height: 100dvh;
-        padding: var(--space-8) 0 var(--space-16);
+        min-height: 88dvh;
+        padding: var(--space-8) 0 var(--space-12);
         overflow: hidden;
         color: #ffffff;
         background:
@@ -835,8 +835,8 @@
         grid-template-columns: minmax(0, 0.96fr) minmax(380px, 0.54fr);
         gap: var(--space-12);
         align-items: center;
-        min-height: calc(100dvh - 110px);
-        padding-top: var(--space-12);
+        min-height: calc(88dvh - 110px);
+        padding-top: var(--space-10);
       }
 
       .union-sem-copy h1 {
@@ -890,26 +890,31 @@
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: var(--space-3);
-        max-width: 840px;
-        margin-top: var(--space-6);
       }
 
       .union-sem-proofbar span {
-        min-height: 104px;
+        min-height: 94px;
         padding: var(--space-4);
-        border: 1px solid rgb(255 255 255 / 0.20);
+        border: 1px solid rgb(17 89 150 / 0.14);
         border-radius: var(--radius-lg);
-        background: rgb(0 0 0 / 0.22);
-        color: rgb(255 255 255 / 0.78);
-        backdrop-filter: blur(16px);
+        background: #ffffff;
+        color: #4e5954;
+        box-shadow: 0 14px 44px rgb(16 22 18 / 0.06);
       }
 
       .union-sem-proofbar strong {
         display: block;
         margin-bottom: var(--space-2);
-        color: #ffffff;
+        color: #115996;
         font-size: clamp(1.35rem, 2vw, 1.5rem);
         line-height: 1.05;
+      }
+
+      .union-sem-proof-strip {
+        position: relative;
+        z-index: 2;
+        margin-top: calc(var(--space-10) * -1);
+        padding-bottom: var(--space-12);
       }
 
       .union-sem-form {
@@ -946,7 +951,7 @@
       }
 
       .union-sem-form h2 {
-        font-size: clamp(2rem, 3vw, 3.2rem);
+        font-size: clamp(1.75rem, 2.6vw, 2.7rem);
         line-height: 1;
       }
 
@@ -957,7 +962,7 @@
       }
 
       .union-sem-form .hubspot-placeholder {
-        min-height: 250px;
+        min-height: 220px;
       }
 
       .union-sem-form-promises {
@@ -968,12 +973,16 @@
       }
 
       .union-sem-form-promises span {
-        padding: var(--space-3);
+        padding: var(--space-2) var(--space-3);
         border-radius: var(--radius-md);
         background: #f5f7f1;
         color: #2c3833;
         font-size: var(--font-size-sm);
         font-weight: 850;
+      }
+
+      .union-sem-form-promises-compact {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
       .union-sem-intro,
@@ -1147,6 +1156,16 @@
         .union-sem-proofbar,
         .union-sem-card-grid-3,
         .union-sem-decision-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .union-sem-proof-strip {
+          margin-top: 0;
+          padding: var(--space-6) 0 var(--space-10);
+          background: #f5f7f1;
+        }
+
+        .union-sem-form-promises-compact {
           grid-template-columns: 1fr;
         }
 
