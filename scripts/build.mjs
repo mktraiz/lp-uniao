@@ -212,6 +212,7 @@ async function buildApps({ pageTemplate, tokensCss, baseCss }) {
 async function buildPreviews({ pageTemplate, tokensCss, baseCss }) {
   const config = JSON.parse(await fs.readFile(previewsPath, "utf8"));
   const previewManifest = [];
+  let rootPreviewHtml = "";
 
   await fs.mkdir(previewsDir, { recursive: true });
 
@@ -229,6 +230,10 @@ async function buildPreviews({ pageTemplate, tokensCss, baseCss }) {
 
     await fs.mkdir(previewDir, { recursive: true });
     await fs.writeFile(path.join(previewDir, "index.html"), rendered.html);
+
+    if (lp.model === "matriculas-uniao-institucional") {
+      rootPreviewHtml = rendered.html;
+    }
 
     previewManifest.push({
       category: lp.category,
@@ -280,6 +285,9 @@ async function buildPreviews({ pageTemplate, tokensCss, baseCss }) {
   );
 
   await fs.writeFile(path.join(previewsDir, "manifest.json"), `${JSON.stringify(previewManifest, null, 2)}\n`);
+  if (rootPreviewHtml) {
+    await fs.writeFile(path.join(distDir, "index.html"), rootPreviewHtml);
+  }
   return previewManifest.length;
 }
 
