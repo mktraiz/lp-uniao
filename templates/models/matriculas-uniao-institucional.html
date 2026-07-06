@@ -8,7 +8,7 @@
               <a href="#diferenciais">Diferenciais</a>
               <a href="#visita">Visita</a>
             </div>
-            <a class="union-horizon-nav-cta" href="#visita">Agendar visita</a>
+            <a class="union-horizon-nav-cta" href="#formulario-card">Agendar visita</a>
           </div>
         </nav>
 
@@ -18,17 +18,22 @@
             <h1>{{title}}</h1>
             <p>{{subtitle}}</p>
             <div class="union-horizon-actions">
-              <a class="button" href="#visita">{{cta}}</a>
+              <a class="button" href="#formulario-card">{{cta}}</a>
               <a class="button button-secondary" href="#segmentos">Conhecer segmentos</a>
             </div>
           </div>
 
           <div class="union-horizon-scene reveal" aria-label="Imagem do Colegio Uniao">
             <div class="union-horizon-photo"></div>
-            <span class="union-horizon-float union-horizon-float-1">Ensino bilingue</span>
-            <span class="union-horizon-float union-horizon-float-2">155 anos</span>
-            <span class="union-horizon-float union-horizon-float-3">Formacao integral</span>
           </div>
+
+          <aside id="formulario-card" class="union-horizon-form union-horizon-hero-form reveal">
+            <div class="union-horizon-form-head">
+              <strong>Agende sua visita</strong>
+              <span>Retorno da equipe de matriculas</span>
+            </div>
+            {{hubspotForm}}
+          </aside>
         </div>
 
         <div class="wrap union-horizon-proof-dock reveal">
@@ -83,7 +88,7 @@
             <span class="union-horizon-eyebrow">Diferenciais</span>
             <h2>Ambientes e escolhas pedagogicas que conectam.</h2>
             <p>O Colegio Uniao combina tradicao, ensino bilingue, formacao socioemocional e uma rotina pensada para desenvolvimento integral.</p>
-            <a class="button" href="#visita">Fazer um tour virtual</a>
+            <a class="button" href="#formulario-card">Agendar visita</a>
           </div>
           <div class="union-horizon-tour-image reveal">
             <div class="union-horizon-tour-photo"></div>
@@ -124,19 +129,13 @@
       </section>
 
       <section id="visita" class="union-horizon-lead">
-        <div class="wrap union-horizon-lead-grid">
+        <div class="wrap union-horizon-lead-grid union-horizon-lead-grid-simple">
           <div class="union-horizon-lead-copy reveal">
             <span class="union-horizon-eyebrow">Proximo passo</span>
             <h2>Vamos construir o proximo capitulo da vida escolar?</h2>
             <p>Agende uma visita e conheca de perto a proposta do Colegio Uniao para sua familia.</p>
           </div>
-          <aside id="formulario-card" class="union-horizon-form reveal">
-            <div class="union-horizon-form-head">
-              <strong>Agende sua visita</strong>
-              <span>Retorno da equipe de matriculas</span>
-            </div>
-            {{hubspotForm}}
-          </aside>
+          <a class="button reveal" href="#formulario-card">Voltar ao formulario</a>
         </div>
       </section>
 
@@ -144,24 +143,13 @@
         <div class="wrap union-horizon-footer-grid">
           <div class="union-horizon-logo union-horizon-logo-footer" style="--logo-image: url('{{logoImage}}');"><span>{{schoolName}}</span></div>
           <p>{{address}}</p>
-          <a href="#visita">Agendar visita</a>
+          <a href="#formulario-card">Agendar visita</a>
         </div>
       </footer>
 
       <script>
         (() => {
-          const root = document.querySelector("[data-scene]");
           const revealItems = document.querySelectorAll(".union-horizon .reveal, .union-horizon .school-content-card");
-
-          if (root && window.matchMedia("(pointer: fine)").matches) {
-            root.addEventListener("pointermove", (event) => {
-              const rect = root.getBoundingClientRect();
-              const x = ((event.clientX - rect.left) / rect.width - 0.5).toFixed(3);
-              const y = ((event.clientY - rect.top) / rect.height - 0.5).toFixed(3);
-              root.style.setProperty("--mx", x);
-              root.style.setProperty("--my", y);
-            });
-          }
 
           if (!("IntersectionObserver" in window)) {
             revealItems.forEach((item) => item.classList.add("is-visible"));
