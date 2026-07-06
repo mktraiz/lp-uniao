@@ -11,6 +11,8 @@ const modelsDir = path.join(root, "templates", "models");
 const distDir = path.join(root, "dist");
 const allDir = path.join(distDir, "apps", "all");
 const previewsDir = path.join(distDir, "previews");
+const publishAppId = process.env.LP_APP_ID || "";
+const publishModel = process.env.LP_MODEL || process.env.PUBLISH_MODEL || "matriculas-uniao-institucional";
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -145,6 +147,7 @@ async function buildApps({ pageTemplate, tokensCss, baseCss }) {
   const files = (await fs.readdir(schoolsDir)).filter((file) => file.endsWith(".json"));
   const manifest = [];
   const warnings = [];
+  let publishedRoot = false;
 
   for (const file of files) {
     const schoolConfig = JSON.parse(await fs.readFile(path.join(schoolsDir, file), "utf8"));
@@ -159,6 +162,11 @@ async function buildApps({ pageTemplate, tokensCss, baseCss }) {
       await fs.writeFile(path.join(pageDir, "index.html"), rendered.html);
       await fs.mkdir(appDir, { recursive: true });
       await fs.writeFile(path.join(appDir, "index.html"), rendered.html);
+
+      if (publishAppId && appId === publishAppId) {
+        await fs.writeFile(path.join(distDir, "index.html"), rendered.html);
+        publishedRoot = true;
+      }
 
       if (!rendered.hubspotConfigured) {
         warnings.push(`${appId}: HubSpot pendente`);
@@ -206,13 +214,12 @@ async function buildApps({ pageTemplate, tokensCss, baseCss }) {
     ].join("\n") + "\n"
   );
 
-  return { appCount: manifest.length, schoolCount: files.length, warnings };
+  return { appCount: manifest.length, schoolCount: files.length, warnings, publishedRoot };
 }
 
-async function buildPreviews({ pageTemplate, tokensCss, baseCss }) {
+async function buildPreviews({ pageTemplate, tokensCss, baseCss, rootAlreadyPublished }) {
   const config = JSON.parse(await fs.readFile(previewsPath, "utf8"));
   const previewManifest = [];
-  let rootPreviewHtml = "";
 
   await fs.mkdir(previewsDir, { recursive: true });
 
@@ -231,8 +238,9 @@ async function buildPreviews({ pageTemplate, tokensCss, baseCss }) {
     await fs.mkdir(previewDir, { recursive: true });
     await fs.writeFile(path.join(previewDir, "index.html"), rendered.html);
 
-    if (lp.model === "matriculas-uniao-institucional") {
-      rootPreviewHtml = rendered.html;
+    if (!rootAlreadyPublished && publishModel && lp.model === publishModel) {
+      await fs.writeFile(path.join(distDir, "index.html"), rendered.html);
+      rootAlreadyPublished = true;
     }
 
     previewManifest.push({
@@ -285,10 +293,7 @@ async function buildPreviews({ pageTemplate, tokensCss, baseCss }) {
   );
 
   await fs.writeFile(path.join(previewsDir, "manifest.json"), `${JSON.stringify(previewManifest, null, 2)}\n`);
-  if (rootPreviewHtml) {
-    await fs.writeFile(path.join(distDir, "index.html"), rootPreviewHtml);
-  }
-  return previewManifest.length;
+  return { previewCount: previewManifest.length, publishedRoot: rootAlreadyPublished };
 }
 
 async function build() {
@@ -299,10 +304,13 @@ async function build() {
   await fs.rm(distDir, { recursive: true, force: true });
 
   const apps = await buildApps({ pageTemplate, tokensCss, baseCss });
-  const previewCount = await buildPreviews({ pageTemplate, tokensCss, baseCss });
+  const previews = await buildPreviews({ pageTemplate, tokensCss, baseCss, rootAlreadyPublished: apps.publishedRoot });
 
   console.log(`Build finalizado: ${apps.appCount} LP(s) em ${apps.schoolCount} escola(s).`);
-  console.log(`Previews gerados: ${previewCount} modelo(s).`);
+  console.log(`Previews gerados: ${previews.previewCount} modelo(s).`);
+  if (!previews.publishedRoot) {
+    console.warn("Aviso: nenhuma LP foi publicada em dist/index.html. Configure LP_APP_ID ou LP_MODEL.");
+  }
   for (const warning of apps.warnings) {
     console.warn(`Aviso: ${warning}`);
   }

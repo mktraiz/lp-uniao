@@ -34,6 +34,7 @@ dist/
 6. Configure `lps[].hubspot.portalId` e `lps[].hubspot.formId`.
 7. Rode `npm run build`.
 8. Publique cada LP como um aplicativo separado no EasyPanel usando o `Dockerfile` da raiz.
+9. Em cada app publicado, a LP escolhida deve virar `dist/index.html`, para abrir direto em `/`.
 
 ## Comandos
 
@@ -52,7 +53,7 @@ npm run serve
 
 Abra `/previews/`.
 
-O build gera os arquivos finais em `dist/apps/`.
+O build gera os arquivos finais em `dist/apps/` e tambem copia a LP escolhida para `dist/index.html`.
 
 Cada LP recebe um `appId` no formato:
 
@@ -92,6 +93,14 @@ Exemplo para a LP de captacao:
 
 ```text
 LP_APP_ID=marca-exemplo--colegio-exemplo--captacao
+```
+
+Com isso, essa LP sera publicada como `index.html` na raiz do app. O dominio abre direto em `/`, sem `/previews/`, `/apps/` ou qualquer subpasta.
+
+Para publicar um modelo de preview como app temporario, use:
+
+```text
+LP_MODEL=matriculas-uniao-institucional
 ```
 
 Depois, configure no EasyPanel o dominio principal que aparece em `primaryDomain`.
