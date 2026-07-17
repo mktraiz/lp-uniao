@@ -1642,7 +1642,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: var(--space-3);
-        margin-top: var(--space-7);
+        margin-top: 1.75rem;
       }
 
       .union-horizon-tour-photo {
@@ -1827,7 +1827,7 @@
 
       .union-horizon-tour-copy p {
         max-width: 36rem;
-        margin: var(--space-5) 0 var(--space-7);
+        margin: var(--space-5) 0 1.75rem;
         color: rgb(255 255 255 / 0.76);
         line-height: 1.7;
       }
@@ -2078,6 +2078,735 @@
         .union-horizon-family,
         .union-horizon-lead {
           padding: var(--space-14) 0;
+        }
+
+        .union-horizon-footer p,
+        .union-horizon-footer a {
+          justify-self: start;
+        }
+      }
+
+      /* Academ institutional redesign inspired by the supplied reference. */
+      .union-horizon {
+        --union-red: #bd1235;
+        --union-red-dark: #8e0d28;
+        --union-red-soft: #fff3f5;
+        --union-ink: #25252a;
+        --union-muted: #66666f;
+        --union-line: #e9d8dd;
+        background: #ffffff;
+        color: var(--union-ink);
+      }
+
+      .union-horizon-nav {
+        position: relative;
+        z-index: 8;
+        height: 84px;
+        padding: 0;
+        background: #ffffff;
+        color: var(--union-ink);
+        border-bottom: 1px solid #eee7e9;
+      }
+
+      .union-horizon-nav-inner {
+        height: 84px;
+      }
+
+      .union-horizon-logo {
+        display: block;
+        width: 184px;
+        height: 58px;
+        background-image: var(--logo-image);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left center;
+        filter: brightness(0) saturate(100%) invert(13%) sepia(91%) saturate(4729%) hue-rotate(338deg) brightness(82%) contrast(96%);
+      }
+
+      .union-horizon-nav-links {
+        gap: 1.75rem;
+        font-size: 0.78rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .union-horizon-nav-links a {
+        position: relative;
+        padding: 32px 0 27px;
+      }
+
+      .union-horizon-nav-links a::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        left: 0;
+        height: 2px;
+        background: var(--union-red);
+        transform: scaleX(0);
+        transition: transform 180ms ease;
+      }
+
+      .union-horizon-nav-links a:hover::after,
+      .union-horizon-nav-links a:focus-visible::after {
+        transform: scaleX(1);
+      }
+
+      .union-horizon-nav-cta,
+      .union-horizon .button {
+        min-height: 48px;
+        border: 1px solid var(--union-red);
+        border-radius: 2px;
+        background: var(--union-red);
+        color: #ffffff;
+        font-weight: 850;
+        box-shadow: none;
+      }
+
+      .union-horizon-nav-cta {
+        padding: 0 var(--space-5);
+      }
+
+      .union-horizon .button {
+        min-height: 52px;
+      }
+
+      .union-horizon .button:hover,
+      .union-horizon-nav-cta:hover {
+        background: var(--union-red-dark);
+        border-color: var(--union-red-dark);
+        transform: translateY(-1px);
+      }
+
+      .union-horizon .button:active,
+      .union-horizon-nav-cta:active {
+        transform: translateY(1px);
+      }
+
+      .union-horizon .button-secondary {
+        border-color: rgb(255 255 255 / 0.74);
+        background: transparent;
+        color: #ffffff;
+      }
+
+      .union-horizon .button-secondary:hover {
+        border-color: #ffffff;
+        background: #ffffff;
+        color: var(--union-red-dark);
+      }
+
+      .union-horizon-hero {
+        position: relative;
+        min-height: 690px;
+        overflow: visible;
+        color: #ffffff;
+        background: var(--union-red);
+        isolation: isolate;
+      }
+
+      .union-horizon-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background:
+          linear-gradient(90deg, rgb(120 0 28 / 0.34), rgb(189 18 53 / 0.82) 55%, rgb(142 13 40 / 0.96)),
+          var(--hero-image);
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: multiply, normal;
+        transform: none;
+      }
+
+      .union-horizon-hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(90deg, transparent 0 28%, rgb(160 9 44 / 0.26) 68%, rgb(122 0 28 / 0.5));
+        pointer-events: none;
+      }
+
+      .union-horizon-hero-grid {
+        min-height: 690px;
+        grid-template-columns: minmax(0, 0.94fr) minmax(350px, 0.46fr);
+        gap: clamp(32px, 5vw, 72px);
+        padding: 54px 0 120px;
+      }
+
+      .union-horizon-copy {
+        max-width: 660px;
+        margin-left: clamp(0px, 4vw, 54px);
+      }
+
+      .union-horizon-eyebrow {
+        margin-bottom: var(--space-4);
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        color: #ffffff;
+        font-size: 0.75rem;
+        font-weight: 900;
+        letter-spacing: 0;
+      }
+
+      .union-horizon-copy h1 {
+        max-width: 650px;
+        font-size: clamp(3.2rem, 5vw, 5.5rem);
+        line-height: 0.97;
+        text-transform: uppercase;
+        text-shadow: 0 3px 22px rgb(72 0 18 / 0.3);
+      }
+
+      .union-horizon-copy p {
+        max-width: 500px;
+        margin-top: var(--space-5);
+        color: rgb(255 255 255 / 0.9);
+        font-size: clamp(1rem, 1.25vw, 1.16rem);
+        line-height: 1.55;
+      }
+
+      .union-horizon-actions {
+        gap: var(--space-3);
+        margin-top: var(--space-6);
+      }
+
+      .union-horizon-form {
+        padding: 26px;
+        border: 0;
+        border-top: 5px solid var(--union-red-dark);
+        border-radius: 2px;
+        background: #ffffff;
+        color: var(--union-ink);
+        box-shadow: 0 24px 50px rgb(70 0 20 / 0.24);
+      }
+
+      .union-horizon-form-head {
+        gap: var(--space-2);
+        margin-bottom: var(--space-5);
+        padding-bottom: var(--space-4);
+        border-bottom: 1px solid var(--union-line);
+      }
+
+      .union-horizon-form-head strong {
+        color: var(--union-red-dark);
+        font-size: clamp(1.45rem, 2vw, 1.9rem);
+      }
+
+      .union-horizon-form-head span {
+        color: var(--union-muted);
+        line-height: 1.45;
+      }
+
+      .union-horizon-form .hubspot-placeholder {
+        min-height: 240px;
+        border-radius: 2px;
+        border-color: var(--union-line);
+        background: #fff9fa;
+      }
+
+      .union-horizon-proof-dock {
+        position: absolute;
+        z-index: 5;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0;
+        margin: 0 auto;
+        padding: 0;
+        transform: translateY(50%);
+        background: #ffffff;
+        color: var(--union-ink);
+        box-shadow: 0 18px 44px rgb(63 13 28 / 0.14);
+      }
+
+      .union-horizon-proof-dock article {
+        min-height: 124px;
+        padding: 24px 28px;
+        border: 0;
+        border-right: 1px solid var(--union-line);
+        background: #ffffff;
+      }
+
+      .union-horizon-proof-dock article:nth-child(2) {
+        background: var(--union-red);
+      }
+
+      .union-horizon-proof-dock article:last-child {
+        border-right: 0;
+      }
+
+      .union-horizon-proof-dock strong {
+        color: var(--union-red-dark);
+        font-size: clamp(1.2rem, 1.7vw, 1.55rem);
+      }
+
+      .union-horizon-proof-dock span {
+        color: var(--union-muted);
+        font-size: 0.88rem;
+      }
+
+      .union-horizon-proof-dock article:nth-child(2) strong,
+      .union-horizon-proof-dock article:nth-child(2) span {
+        color: #ffffff;
+      }
+
+      .union-horizon-section,
+      .union-horizon-tour,
+      .union-horizon-family,
+      .union-horizon-lead {
+        padding: 92px 0;
+      }
+
+      .union-horizon-intro {
+        padding-top: 150px;
+        background: #ffffff;
+      }
+
+      .union-horizon h2 {
+        color: var(--union-red-dark);
+        font-size: clamp(2.15rem, 3.6vw, 3.8rem);
+        line-height: 1.05;
+      }
+
+      .union-horizon-section-title {
+        max-width: 800px;
+        margin-bottom: 48px;
+      }
+
+      .union-horizon-section-title-centered {
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+      }
+
+      .union-horizon-section-title-centered::after {
+        content: "";
+        display: block;
+        width: 64px;
+        height: 3px;
+        margin: 20px auto 0;
+        background: var(--union-red);
+      }
+
+      .union-horizon-section-title-centered p {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .union-horizon-intro-grid {
+        grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.76fr);
+        gap: 0;
+        align-items: stretch;
+      }
+
+      .union-horizon-intro-photo {
+        min-height: 430px;
+        background:
+          linear-gradient(180deg, transparent 62%, rgb(45 9 20 / 0.35)),
+          var(--secondary-image);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .union-horizon-text {
+        align-content: center;
+        gap: var(--space-5);
+        padding: clamp(32px, 5vw, 66px);
+        background: var(--union-red);
+        color: #ffffff;
+        font-size: 1.04rem;
+        line-height: 1.72;
+      }
+
+      .union-horizon-text p {
+        color: rgb(255 255 255 / 0.9);
+      }
+
+      .union-horizon-text-link {
+        width: fit-content;
+        margin-top: var(--space-2);
+        padding-bottom: 4px;
+        border-bottom: 1px solid rgb(255 255 255 / 0.76);
+        color: #ffffff;
+        font-weight: 850;
+        text-decoration: none;
+      }
+
+      .union-horizon-cards-section {
+        background: #f7f6f6;
+      }
+
+      .union-horizon-card-grid {
+        gap: 18px;
+      }
+
+      .union-horizon-card-grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .union-horizon .school-content-card {
+        min-height: 410px;
+        padding: 0 26px 26px;
+        overflow: hidden;
+        border: 1px solid #e5dfe1;
+        border-radius: 2px;
+        background: #ffffff;
+        box-shadow: 0 12px 30px rgb(77 31 43 / 0.07);
+      }
+
+      .union-horizon .school-content-card::before {
+        content: "";
+        display: block;
+        width: calc(100% + 52px);
+        height: 210px;
+        margin: 0 -26px 24px;
+        border-radius: 0;
+        background:
+          linear-gradient(180deg, transparent 58%, rgb(55 6 20 / 0.48)),
+          var(--secondary-image);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .union-horizon-cards-section .school-content-card:nth-child(2)::before {
+        background-image:
+          linear-gradient(180deg, transparent 58%, rgb(55 6 20 / 0.48)),
+          var(--hero-image);
+        background-position: 38% center;
+      }
+
+      .union-horizon-cards-section .school-content-card:nth-child(3)::before {
+        background-position: 78% center;
+      }
+
+      .union-horizon .school-content-card h3 {
+        margin-bottom: var(--space-3);
+        color: var(--union-ink);
+        font-size: clamp(1.2rem, 1.5vw, 1.45rem);
+      }
+
+      .union-horizon .school-content-card p {
+        color: var(--union-muted);
+        line-height: 1.62;
+      }
+
+      .union-horizon-tour {
+        overflow: hidden;
+        background: var(--union-red);
+        color: #ffffff;
+      }
+
+      .union-horizon-tour-grid {
+        grid-template-columns: minmax(340px, 0.68fr) minmax(0, 1fr);
+        gap: 0;
+      }
+
+      .union-horizon-tour-copy {
+        max-width: none;
+        padding: 28px 54px 28px 0;
+      }
+
+      .union-horizon-tour-copy h2 {
+        max-width: 12ch;
+        color: #ffffff;
+        font-size: clamp(2.4rem, 3.8vw, 4.3rem);
+      }
+
+      .union-horizon-tour-copy p {
+        color: rgb(255 255 255 / 0.88);
+      }
+
+      .union-horizon-tour-image {
+        min-height: 520px;
+      }
+
+      .union-horizon-tour-photo {
+        inset: 0;
+        border: 0;
+        border-radius: 0;
+        background:
+          linear-gradient(90deg, rgb(125 8 37 / 0.25), transparent 45%),
+          var(--secondary-image);
+        background-size: cover;
+        background-position: center;
+        box-shadow: none;
+      }
+
+      .union-horizon-diff-section {
+        background: #ffffff;
+      }
+
+      .union-horizon-diff-section .union-horizon-card-grid-5 {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+      }
+
+      .union-horizon-diff-section .school-content-card {
+        grid-column: span 2;
+        min-height: 250px;
+        padding: 28px;
+        border-top: 5px solid var(--union-red);
+        box-shadow: none;
+      }
+
+      .union-horizon-diff-section .school-content-card:nth-child(4),
+      .union-horizon-diff-section .school-content-card:nth-child(5) {
+        grid-column: span 3;
+      }
+
+      .union-horizon-diff-section .school-content-card::before {
+        width: 46px;
+        height: 4px;
+        margin: 0 0 28px;
+        background: var(--union-red);
+      }
+
+      .union-horizon-family {
+        background: #f7f6f6;
+      }
+
+      .union-horizon-family-grid {
+        gap: 0;
+        border: 1px solid var(--union-line);
+        background: #ffffff;
+      }
+
+      .union-horizon-family-card,
+      .union-horizon-family-card:nth-child(2),
+      .union-horizon-family-card:nth-child(3) {
+        min-height: 250px;
+        padding: 32px;
+        border-right: 1px solid var(--union-line);
+        border-radius: 0;
+        background: #ffffff;
+        color: var(--union-ink);
+        box-shadow: none;
+      }
+
+      .union-horizon-family-card:last-child {
+        border-right: 0;
+      }
+
+      .union-horizon-family-card span {
+        margin-bottom: 1.75rem;
+        color: var(--union-red);
+        opacity: 1;
+      }
+
+      .union-horizon-family-card strong {
+        color: var(--union-red-dark);
+      }
+
+      .union-horizon-family-card p {
+        color: var(--union-muted);
+        opacity: 1;
+      }
+
+      .union-horizon-lead {
+        position: relative;
+        overflow: hidden;
+        background:
+          linear-gradient(90deg, rgb(117 5 34 / 0.96), rgb(189 18 53 / 0.88)),
+          var(--hero-image);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .union-horizon-lead-grid-simple {
+        grid-template-columns: minmax(0, 0.78fr) auto;
+      }
+
+      .union-horizon-lead-copy h2 {
+        max-width: 760px;
+        color: #ffffff;
+      }
+
+      .union-horizon-footer {
+        padding: 28px 0;
+        background: #232328;
+        color: rgb(255 255 255 / 0.76);
+      }
+
+      .union-horizon-logo-footer {
+        width: 146px;
+        height: 50px;
+        filter: brightness(0) invert(1);
+      }
+
+      .union-horizon-footer a {
+        color: #ffffff;
+      }
+
+      .union-horizon .reveal,
+      .union-horizon .school-content-card {
+        transform: translateY(22px);
+        transition:
+          opacity 560ms ease,
+          transform 560ms cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+
+      .union-horizon .reveal.is-visible,
+      .union-horizon .school-content-card.is-visible {
+        transform: translateY(0);
+      }
+
+      @media (max-width: 1100px) {
+        .union-horizon-hero-grid {
+          grid-template-columns: minmax(0, 0.78fr) minmax(340px, 0.54fr);
+        }
+
+        .union-horizon-copy {
+          margin-left: 0;
+        }
+
+        .union-horizon-diff-section .union-horizon-card-grid-5 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .union-horizon-diff-section .school-content-card,
+        .union-horizon-diff-section .school-content-card:nth-child(4),
+        .union-horizon-diff-section .school-content-card:nth-child(5) {
+          grid-column: auto;
+        }
+
+        .union-horizon-diff-section .school-content-card:last-child {
+          grid-column: 1 / -1;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .union-horizon-nav,
+        .union-horizon-nav-inner {
+          height: 72px;
+        }
+
+        .union-horizon-logo {
+          width: 150px;
+          height: 48px;
+        }
+
+        .union-horizon-hero {
+          min-height: auto;
+          overflow: hidden;
+        }
+
+        .union-horizon-hero::before {
+          background:
+            linear-gradient(180deg, rgb(133 4 36 / 0.7), rgb(142 13 40 / 0.98) 70%),
+            var(--hero-image);
+          background-size: cover;
+          background-position: 35% center;
+        }
+
+        .union-horizon-hero-grid {
+          min-height: auto;
+          grid-template-columns: 1fr;
+          gap: 30px;
+          padding: 64px 0 48px;
+        }
+
+        .union-horizon-copy h1 {
+          max-width: 11ch;
+          font-size: clamp(2.6rem, 12vw, 4.4rem);
+        }
+
+        .union-horizon-proof-dock {
+          position: relative;
+          grid-template-columns: 1fr;
+          transform: none;
+        }
+
+        .union-horizon-proof-dock article {
+          min-height: 102px;
+          border-right: 0;
+          border-bottom: 1px solid var(--union-line);
+        }
+
+        .union-horizon-intro {
+          padding-top: 72px;
+        }
+
+        .union-horizon-intro-grid,
+        .union-horizon-tour-grid,
+        .union-horizon-family-grid,
+        .union-horizon-lead-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .union-horizon-intro-photo {
+          min-height: 340px;
+        }
+
+        .union-horizon-card-grid-3,
+        .union-horizon-diff-section .union-horizon-card-grid-5 {
+          grid-template-columns: 1fr;
+        }
+
+        .union-horizon-diff-section .school-content-card:last-child {
+          grid-column: auto;
+        }
+
+        .union-horizon-tour-copy {
+          padding: 0 0 48px;
+        }
+
+        .union-horizon-tour-image {
+          min-height: 360px;
+        }
+
+        .union-horizon-family-card,
+        .union-horizon-family-card:nth-child(2),
+        .union-horizon-family-card:nth-child(3) {
+          border-right: 0;
+          border-bottom: 1px solid var(--union-line);
+        }
+
+        .union-horizon-family-card:last-child {
+          border-bottom: 0;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .union-horizon-section,
+        .union-horizon-tour,
+        .union-horizon-family,
+        .union-horizon-lead {
+          padding: 64px 0;
+        }
+
+        .union-horizon-hero-grid {
+          padding-top: 48px;
+        }
+
+        .union-horizon-actions {
+          display: grid;
+        }
+
+        .union-horizon-actions .button {
+          width: 100%;
+        }
+
+        .union-horizon-form {
+          padding: 20px;
+        }
+
+        .union-horizon-section-title {
+          margin-bottom: 34px;
+        }
+
+        .union-horizon h2 {
+          font-size: clamp(2rem, 10vw, 2.75rem);
+        }
+
+        .union-horizon .school-content-card {
+          min-height: 0;
+        }
+
+        .union-horizon-footer-grid {
+          grid-template-columns: 1fr;
+          gap: var(--space-4);
         }
 
         .union-horizon-footer p,

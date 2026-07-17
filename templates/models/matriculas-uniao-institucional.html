@@ -1,17 +1,17 @@
     <main class="union-sem union-horizon" style="--hero-image: url('{{heroImage}}'); --secondary-image: url('{{secondaryImage}}');">
-      <section id="formulario" class="union-horizon-hero" data-scene>
-        <nav class="union-horizon-nav">
-          <div class="wrap union-horizon-nav-inner">
-            <div class="union-horizon-logo" style="--logo-image: url('{{logoImage}}');"><span>{{schoolName}}</span></div>
-            <div class="union-horizon-nav-links">
-              <a href="#segmentos">Segmentos</a>
-              <a href="#diferenciais">Diferenciais</a>
-              <a href="#visita">Visita</a>
-            </div>
-            <a class="union-horizon-nav-cta" href="#formulario-card">Agendar visita</a>
+      <nav class="union-horizon-nav" aria-label="Navegacao principal">
+        <div class="wrap union-horizon-nav-inner">
+          <a class="union-horizon-logo" href="#formulario" style="--logo-image: url('{{logoImage}}');" aria-label="{{schoolName}} - inicio"><span>{{schoolName}}</span></a>
+          <div class="union-horizon-nav-links">
+            <a href="#segmentos">Segmentos</a>
+            <a href="#diferenciais">Diferenciais</a>
+            <a href="#visita">Visita</a>
           </div>
-        </nav>
+          <a class="union-horizon-nav-cta" href="#formulario-card">Agendar visita</a>
+        </div>
+      </nav>
 
+      <section id="formulario" class="union-horizon-hero" data-scene>
         <div class="wrap union-horizon-hero-grid">
           <div class="union-horizon-copy reveal">
             <span class="union-horizon-eyebrow">Do Fundamental ao Ensino Medio</span>
@@ -22,59 +22,42 @@
               <a class="button button-secondary" href="#segmentos">Conhecer segmentos</a>
             </div>
           </div>
-
           <aside id="formulario-card" class="union-horizon-form union-horizon-hero-form reveal">
             <div class="union-horizon-form-head">
               <strong>Agende sua visita</strong>
-              <span>Retorno da equipe de matriculas</span>
+              <span>Preencha seus dados para falar com a equipe de matriculas.</span>
             </div>
             {{formEmbed}}
           </aside>
         </div>
-
-        <div class="wrap union-horizon-proof-dock reveal">
-          <article>
-            <strong>{{statValue}}</strong>
-            <span>{{statLabel}}</span>
-          </article>
-          <article>
-            <strong>Raiz Educacao</strong>
-            <span>Gestao moderna com legado escolar</span>
-          </article>
-          <article>
-            <strong>Centro de Uruguaiana</strong>
-            <span>{{address}}</span>
-          </article>
-          <article>
-            <strong>Visita guiada</strong>
-            <span>Atendimento para tirar duvidas da familia</span>
-          </article>
+        <div class="wrap union-horizon-proof-dock reveal" aria-label="Destaques do Colegio Uniao">
+          <article><strong>{{statValue}}</strong><span>{{statLabel}}</span></article>
+          <article><strong>Raiz Educacao</strong><span>Gestao moderna com legado escolar</span></article>
+          <article><strong>Centro de Uruguaiana</strong><span>{{address}}</span></article>
         </div>
       </section>
 
       <section class="union-horizon-section union-horizon-intro">
-        <div class="wrap union-horizon-intro-grid">
-          <div class="reveal">
-            <span class="union-horizon-eyebrow">Por que escolher o Colegio Uniao?</span>
-            <h2>{{introTitle}}</h2>
-          </div>
-          <div class="union-horizon-text reveal">
-            <p>{{introText}}</p>
-            <p>{{missionText}}</p>
+        <div class="wrap union-horizon-intro-inner">
+          <div class="union-horizon-section-title union-horizon-section-title-centered reveal"><h2>{{introTitle}}</h2></div>
+          <div class="union-horizon-intro-grid">
+            <div class="union-horizon-intro-photo reveal" role="img" aria-label="Estudantes do Colegio Uniao"></div>
+            <div class="union-horizon-text reveal">
+              <p>{{introText}}</p>
+              <p>{{missionText}}</p>
+              <a class="union-horizon-text-link" href="#diferenciais">Conheca nossos diferenciais</a>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="segmentos" class="union-horizon-section union-horizon-cards-section">
         <div class="wrap">
-          <div class="union-horizon-section-title reveal">
-            <span class="union-horizon-eyebrow">Segmentos</span>
+          <div class="union-horizon-section-title union-horizon-section-title-centered reveal">
             <h2>Uma jornada completa de aprendizagem.</h2>
             <p>Da base academica ao projeto de vida, a experiencia escolar acompanha cada fase com proximidade.</p>
           </div>
-          <div class="union-horizon-card-grid union-horizon-card-grid-3">
-            {{segmentCards}}
-          </div>
+          <div class="union-horizon-card-grid union-horizon-card-grid-3">{{segmentCards}}</div>
         </div>
       </section>
 
@@ -84,42 +67,28 @@
             <span class="union-horizon-eyebrow">Diferenciais</span>
             <h2>Ambientes e escolhas pedagogicas que conectam.</h2>
             <p>O Colegio Uniao combina tradicao, ensino bilingue, formacao socioemocional e uma rotina pensada para desenvolvimento integral.</p>
-            <a class="button" href="#formulario-card">Agendar visita</a>
+            <a class="button button-secondary" href="#formulario-card">Agendar visita</a>
           </div>
           <div class="union-horizon-tour-image reveal">
-            <div class="union-horizon-tour-photo"></div>
+            <div class="union-horizon-tour-photo" role="img" aria-label="Ambiente de aprendizagem do Colegio Uniao"></div>
           </div>
         </div>
       </section>
 
       <section class="union-horizon-section union-horizon-diff-section">
         <div class="wrap">
-          <div class="union-horizon-section-title reveal">
-            <span class="union-horizon-eyebrow">Muito alem do ensino</span>
-            <h2>Motivos claros para decidir com seguranca.</h2>
-          </div>
-          <div class="union-horizon-card-grid union-horizon-card-grid-5">
-            {{differentialCards}}
-          </div>
+          <div class="union-horizon-section-title union-horizon-section-title-centered reveal"><h2>Motivos claros para decidir com seguranca.</h2></div>
+          <div class="union-horizon-card-grid union-horizon-card-grid-5">{{differentialCards}}</div>
         </div>
       </section>
 
       <section class="union-horizon-family">
-        <div class="wrap union-horizon-family-grid">
-          <div class="union-horizon-family-card reveal">
-            <span>01</span>
-            <strong>Compare proposta, rotina e valores.</strong>
-            <p>A LP conduz a familia pela decisao antes de pedir o contato, reduzindo duvidas no formulario.</p>
-          </div>
-          <div class="union-horizon-family-card reveal">
-            <span>02</span>
-            <strong>Leve a familia para a visita.</strong>
-            <p>O CTA prioriza agendamento, que costuma ser o passo mais forte para matriculas escolares.</p>
-          </div>
-          <div class="union-horizon-family-card reveal">
-            <span>03</span>
-            <strong>Reforce marca e confianca.</strong>
-            <p>Logo, historia, endereco e argumentos aparecem com hierarquia visual sem poluir a primeira dobra.</p>
+        <div class="wrap">
+          <div class="union-horizon-section-title union-horizon-section-title-centered reveal"><h2>Uma escolha feita em familia.</h2></div>
+          <div class="union-horizon-family-grid">
+            <div class="union-horizon-family-card reveal"><span>01</span><strong>Compare proposta, rotina e valores.</strong><p>A LP conduz a familia pela decisao antes de pedir o contato, reduzindo duvidas no formulario.</p></div>
+            <div class="union-horizon-family-card reveal"><span>02</span><strong>Leve a familia para a visita.</strong><p>O CTA prioriza agendamento, que costuma ser o passo mais forte para matriculas escolares.</p></div>
+            <div class="union-horizon-family-card reveal"><span>03</span><strong>Reforce marca e confianca.</strong><p>Logo, historia, endereco e argumentos aparecem com hierarquia visual sem poluir a primeira dobra.</p></div>
           </div>
         </div>
       </section>
@@ -127,17 +96,16 @@
       <section id="visita" class="union-horizon-lead">
         <div class="wrap union-horizon-lead-grid union-horizon-lead-grid-simple">
           <div class="union-horizon-lead-copy reveal">
-            <span class="union-horizon-eyebrow">Proximo passo</span>
             <h2>Vamos construir o proximo capitulo da vida escolar?</h2>
             <p>Agende uma visita e conheca de perto a proposta do Colegio Uniao para sua familia.</p>
           </div>
-          <a class="button reveal" href="#formulario-card">Voltar ao formulario</a>
+          <a class="button button-secondary reveal" href="#formulario-card">Voltar ao formulario</a>
         </div>
       </section>
 
       <footer class="union-horizon-footer">
         <div class="wrap union-horizon-footer-grid">
-          <div class="union-horizon-logo union-horizon-logo-footer" style="--logo-image: url('{{logoImage}}');"><span>{{schoolName}}</span></div>
+          <a class="union-horizon-logo union-horizon-logo-footer" href="#formulario" style="--logo-image: url('{{logoImage}}');" aria-label="{{schoolName}} - inicio"><span>{{schoolName}}</span></a>
           <p>{{address}}</p>
           <a href="#formulario-card">Agendar visita</a>
         </div>
@@ -146,12 +114,10 @@
       <script>
         (() => {
           const revealItems = document.querySelectorAll(".union-horizon .reveal, .union-horizon .school-content-card");
-
           if (!("IntersectionObserver" in window)) {
             revealItems.forEach((item) => item.classList.add("is-visible"));
             return;
           }
-
           const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
               if (entry.isIntersecting) {
@@ -159,8 +125,7 @@
                 observer.unobserve(entry.target);
               }
             });
-          }, { threshold: 0.18 });
-
+          }, { threshold: 0.12 });
           revealItems.forEach((item) => observer.observe(item));
         })();
       </script>
