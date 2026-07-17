@@ -26,11 +26,6 @@
         "aliases": []
       },
       "whatsapp": "",
-      "hubspot": {
-        "region": "na1",
-        "portalId": "",
-        "formId": ""
-      },
       "offer": "Preencha o formulario para conversar com a equipe de matriculas.",
       "stat": {
         "value": "2026",
@@ -54,11 +49,6 @@
         "aliases": []
       },
       "whatsapp": "",
-      "hubspot": {
-        "region": "na1",
-        "portalId": "",
-        "formId": ""
-      },
       "offer": "Preencha o formulario para receber as informacoes da campanha.",
       "stat": {
         "value": "Bolsa",

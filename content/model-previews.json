@@ -23,9 +23,15 @@
       "subtitle": "Uma oportunidade objetiva para familias que querem estudar em uma escola completa.",
       "cta": "Inscrever no bolsao",
       "offer": "Preencha o formulario para receber as regras, datas e proximos passos da campanha.",
-      "stat": { "value": "Bolsa", "label": "Campanha com formulario HubSpot" },
-      "highlights": ["Oferta clara para conversao direta", "Boa para campanhas de prova e desconto", "Hero forte com estatistica ou chamada de oportunidade"],
-      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+      "stat": {
+        "value": "Bolsa",
+        "label": "Campanha com formulario Raiz"
+      },
+      "highlights": [
+        "Oferta clara para conversao direta",
+        "Boa para campanhas de prova e desconto",
+        "Hero forte com estatistica ou chamada de oportunidade"
+      ]
     },
     {
       "category": "Bolsao",
@@ -35,9 +41,15 @@
       "subtitle": "Entenda as etapas, confirme a inscricao e receba acompanhamento da equipe da escola.",
       "cta": "Comecar inscricao",
       "offer": "Modelo indicado para explicar jornada de inscricao, prova, resultado e atendimento.",
-      "stat": { "value": "3 etapas", "label": "Inscricao, prova e retorno" },
-      "highlights": ["Explica a campanha sem confundir", "Reduz duvidas antes do formulario", "Funciona bem para familias indecisas"],
-      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+      "stat": {
+        "value": "3 etapas",
+        "label": "Inscricao, prova e retorno"
+      },
+      "highlights": [
+        "Explica a campanha sem confundir",
+        "Reduz duvidas antes do formulario",
+        "Funciona bem para familias indecisas"
+      ]
     },
     {
       "category": "Matriculas",
@@ -58,7 +70,10 @@
       "mission": "Nossa missao e oferecer uma educacao inovadora e de excelencia, capaz de transformar realidades e contribuir para a formacao integral do ser humano, fundamentada em valores eticos e cristaos.",
       "address": "Rua Tiradentes, 3.432 - Centro, Uruguaiana/RS",
       "offer": "A partir de 2025, fazemos parte da Raiz Educacao, grupo educacional que une o melhor da educacao a praticas de gestao empresarial modernas e atuais.",
-      "stat": { "value": "155 anos", "label": "Educando geracoes com excelencia" },
+      "stat": {
+        "value": "155 anos",
+        "label": "Educando geracoes com excelencia"
+      },
       "media": {
         "logoImage": "https://colegiouniao.com.br/_next/image/?url=https%3A%2F%2Fcms.raizeducacao.com.br%2Funiaofinal%2Fwp-content%2Fuploads%2Fsites%2F25%2F2024%2F12%2FMonocromatica-positiva.png&w=384&q=95",
         "heroImage": "https://colegiouniao.com.br/_next/image/?url=https%3A%2F%2Fcms.raizeducacao.com.br%2Funiaofinal%2Fwp-content%2Fuploads%2Fsites%2F25%2F2025%2F07%2FLanding-page-2048x852.png&w=1920&q=75",
@@ -100,8 +115,12 @@
           "text": "Modalidades esportivas e culturais que estimulam habilidades, disciplina, convivencia e desenvolvimento integral."
         }
       ],
-      "highlights": ["Ensino bilingue desde os primeiros anos", "Tradicao centenaria com ensino atualizado", "Formacao de liderancas e protagonismo juvenil", "Ambiente acolhedor, seguro e com estrutura completa"],
-      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+      "highlights": [
+        "Ensino bilingue desde os primeiros anos",
+        "Tradicao centenaria com ensino atualizado",
+        "Formacao de liderancas e protagonismo juvenil",
+        "Ambiente acolhedor, seguro e com estrutura completa"
+      ]
     },
     {
       "category": "Matriculas",
@@ -111,9 +130,15 @@
       "subtitle": "Conheca uma proposta pedagogica forte, com acompanhamento proximo e estrutura completa.",
       "cta": "Falar com matriculas",
       "offer": "Preencha o formulario para receber atendimento da equipe de matriculas.",
-      "stat": { "value": "2026", "label": "Periodo de matriculas aberto" },
-      "highlights": ["Tom institucional de alto valor", "Boa para marcas fortes", "Funciona como LP principal da escola"],
-      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+      "stat": {
+        "value": "2026",
+        "label": "Periodo de matriculas aberto"
+      },
+      "highlights": [
+        "Tom institucional de alto valor",
+        "Boa para marcas fortes",
+        "Funciona como LP principal da escola"
+      ]
     },
     {
       "category": "Matriculas",
@@ -123,9 +148,15 @@
       "subtitle": "Agende uma conversa e entenda como a unidade pode acompanhar seu filho de perto.",
       "cta": "Agendar conversa",
       "offer": "Modelo pensado para unidade, acolhimento, rotina escolar e atendimento consultivo.",
-      "stat": { "value": "Visita", "label": "Atendimento proximo" },
-      "highlights": ["Valoriza acolhimento", "Bom para campanhas locais", "Foco em visita e conversa"],
-      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+      "stat": {
+        "value": "Visita",
+        "label": "Atendimento proximo"
+      },
+      "highlights": [
+        "Valoriza acolhimento",
+        "Bom para campanhas locais",
+        "Foco em visita e conversa"
+      ]
     },
     {
       "category": "Matriculas",
@@ -135,9 +166,15 @@
       "subtitle": "Compare estrutura, acompanhamento e proposta pedagogica antes de decidir a matricula.",
       "cta": "Receber atendimento",
       "offer": "Modelo para argumentos objetivos, diferenciais e comparacao.",
-      "stat": { "value": "Diferenciais", "label": "Escolha com criterio" },
-      "highlights": ["Mais racional e comparativo", "Bom para ensino fundamental e medio", "Organiza motivos de escolha"],
-      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+      "stat": {
+        "value": "Diferenciais",
+        "label": "Escolha com criterio"
+      },
+      "highlights": [
+        "Mais racional e comparativo",
+        "Bom para ensino fundamental e medio",
+        "Organiza motivos de escolha"
+      ]
     },
     {
       "category": "Matriculas",
@@ -147,9 +184,15 @@
       "subtitle": "Converse com a escola e conheca um ambiente pensado para aprender com cuidado.",
       "cta": "Quero conhecer",
       "offer": "Modelo mais emocional, bom para primeira infancia e familias em fase inicial de decisao.",
-      "stat": { "value": "Cuidado", "label": "Atendimento com escuta" },
-      "highlights": ["Tom familiar", "Boa entrada para visitas", "Menos agressivo comercialmente"],
-      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+      "stat": {
+        "value": "Cuidado",
+        "label": "Atendimento com escuta"
+      },
+      "highlights": [
+        "Tom familiar",
+        "Boa entrada para visitas",
+        "Menos agressivo comercialmente"
+      ]
     },
     {
       "category": "Evento de captacao",
@@ -159,10 +202,18 @@
       "subtitle": "Visite a escola, conheca a equipe e veja de perto os espacos da unidade.",
       "cta": "Confirmar presenca",
       "offer": "Modelo para escola aberta, visita guiada e tour pela unidade.",
-      "event": { "dateLabel": "Open Day" },
-      "stat": { "value": "Open Day", "label": "Visita guiada" },
-      "highlights": ["Foco em presenca no evento", "Boa leitura no mobile", "CTA direto para confirmacao"],
-      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+      "event": {
+        "dateLabel": "Open Day"
+      },
+      "stat": {
+        "value": "Open Day",
+        "label": "Visita guiada"
+      },
+      "highlights": [
+        "Foco em presenca no evento",
+        "Boa leitura no mobile",
+        "CTA direto para confirmacao"
+      ]
     },
     {
       "category": "Evento de captacao",
@@ -172,10 +223,18 @@
       "subtitle": "Participe de uma vivencia pensada para aproximar familia, aluno e equipe pedagogica.",
       "cta": "Reservar vaga",
       "offer": "Modelo para aula experimental, experiencia pratica e vivencia com alunos.",
-      "event": { "dateLabel": "Vivencia" },
-      "stat": { "value": "Vivencia", "label": "Experiencia presencial" },
-      "highlights": ["Mais sensorial e acolhedor", "Ajuda a vender rotina", "Bom para evento por segmento"],
-      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+      "event": {
+        "dateLabel": "Vivencia"
+      },
+      "stat": {
+        "value": "Vivencia",
+        "label": "Experiencia presencial"
+      },
+      "highlights": [
+        "Mais sensorial e acolhedor",
+        "Ajuda a vender rotina",
+        "Bom para evento por segmento"
+      ]
     },
     {
       "category": "Evento de captacao",
@@ -185,10 +244,18 @@
       "subtitle": "Uma conversa para entender a proposta da escola e tirar duvidas antes da matricula.",
       "cta": "Inscrever no encontro",
       "offer": "Modelo para palestra, encontro com coordenacao ou evento de autoridade.",
-      "event": { "dateLabel": "Encontro" },
-      "stat": { "value": "Palestra", "label": "Conteudo para familias" },
-      "highlights": ["Bom para autoridade pedagogica", "Organiza programacao", "Funciona para eventos online ou presenciais"],
-      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+      "event": {
+        "dateLabel": "Encontro"
+      },
+      "stat": {
+        "value": "Palestra",
+        "label": "Conteudo para familias"
+      },
+      "highlights": [
+        "Bom para autoridade pedagogica",
+        "Organiza programacao",
+        "Funciona para eventos online ou presenciais"
+      ]
     },
     {
       "category": "Evento de captacao",
@@ -198,10 +265,18 @@
       "subtitle": "Uma experiencia especial para familias que querem conhecer a escola em profundidade.",
       "cta": "Solicitar participacao",
       "offer": "Modelo para eventos premium, agendas elaboradas e campanhas especiais.",
-      "event": { "dateLabel": "Imersao" },
-      "stat": { "value": "Imersao", "label": "Agenda especial" },
-      "highlights": ["Visual mais premium", "Boa para evento limitado", "Cria percepcao de exclusividade"],
-      "hubspot": { "region": "na1", "portalId": "", "formId": "" }
+      "event": {
+        "dateLabel": "Imersao"
+      },
+      "stat": {
+        "value": "Imersao",
+        "label": "Agenda especial"
+      },
+      "highlights": [
+        "Visual mais premium",
+        "Boa para evento limitado",
+        "Cria percepcao de exclusividade"
+      ]
     }
   ]
 }

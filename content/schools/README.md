@@ -13,8 +13,7 @@ Campos importantes:
 - `lps[].model`: modelo visual usado pelo gerador.
 - `lps[].domain.primary`: dominio ou subdominio principal daquela LP no EasyPanel.
 - `lps[].domain.aliases`: dominios extras que devem apontar para a mesma LP.
-- `lps[].hubspot.portalId`: portal HubSpot.
-- `lps[].hubspot.formId`: formulario HubSpot.
+- formulario: o widget Raiz e injetado automaticamente em todas as LPs.
 - `whatsapp`: numero ou link final alternativo para CTA, quando existir.
 
 Use `escola-exemplo.json` como modelo.

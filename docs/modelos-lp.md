@@ -37,27 +37,17 @@ Decisao: manter um design system proprio em CSS estatico, sem instalar shadcn, T
 ```json
 {
   "type": "captacao",
-  "model": "matriculas-premium",
-  "hubspot": {
-    "region": "na1",
-    "portalId": "",
-    "formId": ""
-  }
+  "model": "matriculas-premium"
 }
 ```
 
-## HubSpot
+## Formulario e rastreio
 
-Cada LP deve ter seu proprio bloco:
+O build injeta automaticamente o widget Raiz no ponto de formulario de cada modelo:
 
-```json
-"hubspot": {
-  "region": "na1",
-  "portalId": "0000000",
-  "formId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-}
+```html
+<div id="raiz-form"></div>
+<script src="https://formularios.raizeducacao.com.br/widget.js?v=2" data-api="https://formularios.raizeducacao.com.br" defer></script>
 ```
 
-Quando `portalId` e `formId` estiverem preenchidos, o build injeta automaticamente o script oficial do HubSpot naquela LP.
-
-Se estiverem vazios, a LP mostra um placeholder interno de formulario pendente e o manifesto marca `hubspotConfigured: false`.
+O rastreio HubSpot global e inserido no `<head>` de todas as LPs com o portal `7691970`.

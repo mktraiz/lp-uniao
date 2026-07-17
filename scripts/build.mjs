@@ -64,26 +64,8 @@ const renderContentCards = (items = [], className = "school-content-card") =>
     )
     .join("\n            ");
 
-const hubspotFor = (appId, lp) => {
-  const portalId = lp.hubspot?.portalId || "";
-  const formId = lp.hubspot?.formId || lp.formId || "";
-  const region = lp.hubspot?.region || "na1";
-  const target = `hubspot-form-${appId}`;
-
-  if (!portalId || !formId) {
-    return {
-      form: `<div class="hubspot-placeholder"><span>Formulario HubSpot pendente</span><p>Configure os campos abaixo nesta LP para ativar a captura.</p><code>hubspot.portalId</code><code>hubspot.formId</code></div>`,
-      script: "",
-      configured: false
-    };
-  }
-
-  return {
-    form: `<div class="hubspot-slot" id="${target}"></div>`,
-    script: `\n    <script src="https://js.hsforms.net/forms/embed/v2.js" charset="utf-8"></script>\n    <script>\n      hbspt.forms.create({ region: "${region}", portalId: "${portalId}", formId: "${formId}", target: "#${target}" });\n    </script>`,
-    configured: true
-  };
-};
+const raizFormEmbed = `<div id="raiz-form"></div>
+<script src="https://formularios.raizeducacao.com.br/widget.js?v=2" data-api="https://formularios.raizeducacao.com.br" defer></script>`;
 
 async function renderLp({ schoolConfig, lp, appId, pageTemplate, tokensCss, baseCss }) {
   const model = lp.model || "matriculas-premium";
@@ -96,7 +78,6 @@ async function renderLp({ schoolConfig, lp, appId, pageTemplate, tokensCss, base
   const highlights = (lp.highlights || [])
     .map((item) => `<div class="proof-card">${escapeHtml(item)}</div>`)
     .join("\n            ");
-  const hubspot = hubspotFor(appId, lp);
   const replacements = {
     brandName: escapeHtml(schoolConfig.brand.name),
     schoolName: escapeHtml(schoolConfig.school.name),
@@ -123,7 +104,7 @@ async function renderLp({ schoolConfig, lp, appId, pageTemplate, tokensCss, base
     heroImage: cssUrlFor(lp.media?.heroImage || ""),
     secondaryImage: cssUrlFor(lp.media?.secondaryImage || lp.media?.heroImage || ""),
     logoImage: cssUrlFor(lp.media?.logoImage || ""),
-    hubspotForm: hubspot.form,
+    formEmbed: raizFormEmbed,
     primaryColor: schoolConfig.primaryColor || "#0F6B5F",
     secondaryColor: schoolConfig.secondaryColor || "#F5B84B"
   };
@@ -134,11 +115,10 @@ async function renderLp({ schoolConfig, lp, appId, pageTemplate, tokensCss, base
     model,
     body,
     tokensCss: render(tokensCss, replacements),
-    baseCss,
-    hubspotScript: hubspot.script
+    baseCss
   });
 
-  return { html, model, hubspotConfigured: hubspot.configured };
+  return { html, model };
 }
 
 async function buildApps({ pageTemplate, tokensCss, baseCss }) {
@@ -168,9 +148,6 @@ async function buildApps({ pageTemplate, tokensCss, baseCss }) {
         publishedRoot = true;
       }
 
-      if (!rendered.hubspotConfigured) {
-        warnings.push(`${appId}: HubSpot pendente`);
-      }
 
       manifest.push({
         appId,
@@ -183,7 +160,7 @@ async function buildApps({ pageTemplate, tokensCss, baseCss }) {
         model: rendered.model,
         primaryDomain: domainFor(schoolConfig, lp),
         domainAliases: lp.domain?.aliases || [],
-        hubspotConfigured: rendered.hubspotConfigured,
+        formProvider: "raiz",
         route: `/${schoolConfig.brand.slug}/${schoolConfig.school.slug}/${lp.type}/`,
         dist: `dist/apps/${appId}`
       });
@@ -198,14 +175,14 @@ async function buildApps({ pageTemplate, tokensCss, baseCss }) {
   await fs.writeFile(
     path.join(distDir, "easypanel-apps.csv"),
     [
-      ["appId", "model", "primaryDomain", "domainAliases", "hubspotConfigured", "dist"].map(csvValue).join(","),
+      ["appId", "model", "primaryDomain", "domainAliases", "formProvider", "dist"].map(csvValue).join(","),
       ...manifest.map((item) =>
         [
           item.appId,
           item.model,
           item.primaryDomain,
           item.domainAliases.join(" "),
-          item.hubspotConfigured,
+          item.formProvider,
           item.dist
         ]
           .map(csvValue)
@@ -282,7 +259,7 @@ async function buildPreviews({ pageTemplate, tokensCss, baseCss, rootAlreadyPubl
   <body>
     <main>
       <h1>Previews dos modelos de LP</h1>
-      <p>Abra cada modelo para comparar estrutura, ritmo visual, area de formulario HubSpot e tom de campanha.</p>
+      <p>Abra cada modelo para comparar estrutura, ritmo visual, area de formulario Raiz e tom de campanha.</p>
       <div class="grid">
         ${cards}
       </div>

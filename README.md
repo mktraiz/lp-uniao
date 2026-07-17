@@ -31,7 +31,7 @@ dist/
 3. Preencha os briefs das duas LPs.
 4. Defina o dominio principal de cada LP em `lps[].domain.primary`.
 5. Escolha o modelo visual em `lps[].model`.
-6. Configure `lps[].hubspot.portalId` e `lps[].hubspot.formId`.
+6. O formulario Raiz e o rastreio HubSpot global ja sao injetados automaticamente no build.
 7. Rode `npm run build`.
 8. Publique cada LP como um aplicativo separado no EasyPanel usando o `Dockerfile` da raiz.
 9. Em cada app publicado, a LP escolhida deve virar `dist/index.html`, para abrir direto em `/`.

@@ -16,7 +16,7 @@ Cada arquivo representa uma escola e contem:
 - destaques.
 - dominio principal da LP;
 - aliases de dominio, quando houver.
-- formulario HubSpot.
+- formulario Raiz injetado automaticamente pelo gerador.
 
 ## Producao
 
