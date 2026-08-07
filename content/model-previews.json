@@ -75,44 +75,58 @@
         "label": "Educando geracoes com excelencia"
       },
       "media": {
-        "logoImage": "https://colegiouniao.com.br/_next/image/?url=https%3A%2F%2Fcms.raizeducacao.com.br%2Funiaofinal%2Fwp-content%2Fuploads%2Fsites%2F25%2F2024%2F12%2FMonocromatica-positiva.png&w=384&q=95",
-        "heroImage": "https://colegiouniao.com.br/_next/image/?url=https%3A%2F%2Fcms.raizeducacao.com.br%2Funiaofinal%2Fwp-content%2Fuploads%2Fsites%2F25%2F2025%2F07%2FLanding-page-2048x852.png&w=1920&q=75",
-        "secondaryImage": "https://colegiouniao.com.br/_next/image/?url=https%3A%2F%2Fcms.raizeducacao.com.br%2Funiaofinal%2Fwp-content%2Fuploads%2Fsites%2F25%2F2025%2F07%2FMG_5714-1024x682.png&w=1080&q=75"
+        "logoImage": "./assets/colegio-uniao/logo-color.webp",
+        "footerLogoImage": "./assets/colegio-uniao/logo-white.webp",
+        "heroImage": "./assets/colegio-uniao/hero-unionistas.webp",
+        "secondaryImage": "./assets/colegio-uniao/ensino-bilingue.webp"
+      },
+      "unit": {
+        "name": "Unidade Uruguaiana",
+        "description": "No Centro de Uruguaiana, nossa unidade reúne mais de 6 mil m² em ambientes planejados para o desenvolvimento acadêmico, social e esportivo dos alunos.",
+        "image": "./assets/colegio-uniao/unidade-uruguaiana.webp"
       },
       "segments": [
         {
           "title": "Ensino Fundamental Anos Iniciais",
-          "text": "Formacao com base em valores, autonomia e respeito ao ritmo de cada crianca, incentivando curiosidade, senso critico e atitudes eticas."
+          "text": "Formacao com base em valores, autonomia e respeito ao ritmo de cada crianca, incentivando curiosidade, senso critico e atitudes eticas.",
+          "image": "./assets/colegio-uniao/fundamental-iniciais.webp"
         },
         {
           "title": "Ensino Fundamental Anos Finais",
-          "text": "Aprofundamento dos conhecimentos e desenvolvimento da autonomia intelectual, com formacao cidada e pensamento critico."
+          "text": "Aprofundamento dos conhecimentos e desenvolvimento da autonomia intelectual, com formacao cidada e pensamento critico.",
+          "image": "./assets/colegio-uniao/fundamental-finais.webp"
         },
         {
           "title": "Ensino Medio",
-          "text": "Educacao voltada ao projeto de vida, unindo conhecimento academico, formacao etica e visao social."
+          "text": "Educacao voltada ao projeto de vida, unindo conhecimento academico, formacao etica e visao social.",
+          "image": "./assets/colegio-uniao/ensino-medio.webp"
         }
       ],
       "differentials": [
         {
           "title": "Ensino bilingue",
-          "text": "Primeiro e unico colegio com ensino bilingue de Uruguaiana, com aulas de ingles a partir do 1o ano e metodologia internacional."
+          "text": "Primeiro e unico colegio com ensino bilingue de Uruguaiana, com aulas de ingles a partir do 1o ano e metodologia internacional.",
+          "image": "./assets/colegio-uniao/ensino-bilingue.webp"
         },
         {
           "title": "Tradicao centenaria com ensino atualizado",
-          "text": "155 anos de historia educando geracoes com excelencia, aliando legado institucional a praticas pedagogicas modernas."
+          "text": "155 anos de historia educando geracoes com excelencia, aliando legado institucional a praticas pedagogicas modernas.",
+          "image": "./assets/colegio-uniao/unidade-uruguaiana.webp"
         },
         {
           "title": "Formacao de lideres",
-          "text": "Projetos que desenvolvem autonomia, responsabilidade e participacao ativa em temas sociais, academicos e comunitarios."
+          "text": "Projetos que desenvolvem autonomia, responsabilidade e participacao ativa em temas sociais, academicos e comunitarios.",
+          "image": "./assets/colegio-uniao/formacao-lideres.webp"
         },
         {
           "title": "Programa socioemocional",
-          "text": "Competencias socioemocionais trabalhadas de forma continua, com empatia, responsabilidade, cooperacao e autoconhecimento."
+          "text": "Competencias socioemocionais trabalhadas de forma continua, com empatia, responsabilidade, cooperacao e autoconhecimento.",
+          "image": "./assets/colegio-uniao/programa-socioemocional.webp"
         },
         {
           "title": "Atividades extracurriculares",
-          "text": "Modalidades esportivas e culturais que estimulam habilidades, disciplina, convivencia e desenvolvimento integral."
+          "text": "Modalidades esportivas e culturais que estimulam habilidades, disciplina, convivencia e desenvolvimento integral.",
+          "image": "./assets/colegio-uniao/atividades-extracurriculares.webp"
         }
       ],
       "highlights": [

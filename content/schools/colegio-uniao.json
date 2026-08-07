@@ -1,0 +1,116 @@
+{
+  "brand": {
+    "name": "Colégio União",
+    "slug": "colegio-uniao",
+    "domain": "colegiouniao.com.br"
+  },
+  "school": {
+    "name": "Colégio União",
+    "slug": "uruguaiana",
+    "city": "Uruguaiana",
+    "state": "RS"
+  },
+  "audience": "Famílias interessadas em matrícula no Ensino Fundamental ou Ensino Médio.",
+  "primaryColor": "#0F4C86",
+  "secondaryColor": "#CD3739",
+  "lps": [
+    {
+      "appId": "colegio-uniao--captacao",
+      "type": "captacao",
+      "model": "matriculas-uniao-institucional",
+      "title": "Matrículas abertas no Colégio União",
+      "subtitle": "Tradição, inovação e formação integral para seu filho construir o futuro com confiança.",
+      "cta": "Quero agendar uma visita",
+      "domain": {
+        "primary": "colegiouniao.com.br",
+        "aliases": []
+      },
+      "seo": {
+        "title": "Matrículas abertas | Colégio União em Uruguaiana",
+        "description": "Conheça o Colégio União em Uruguaiana. Ensino Fundamental e Ensino Médio, programa bilíngue, formação integral e estrutura completa.",
+        "canonicalUrl": "https://colegiouniao.com.br/matriculas/"
+      },
+      "whatsapp": "",
+      "offer": "Preencha o formulário para conversar com a equipe de matrículas e agendar sua visita.",
+      "intro": {
+        "title": "Uma história de educação que segue olhando para a frente.",
+        "text": "Somos referência na formação de lideranças na fronteira gaúcha, integrando modernidade e tradição em uma trajetória educacional que acompanha estudantes do Ensino Fundamental ao Ensino Médio."
+      },
+      "mission": "Nossa missão é oferecer uma educação inovadora e de excelência, capaz de transformar realidades e contribuir para a formação integral do ser humano, fundamentada em valores éticos e cristãos.",
+      "address": "Rua Tiradentes, 3.432 - Centro, Uruguaiana/RS",
+      "stat": {
+        "value": "Desde 1870",
+        "label": "Educando gerações com excelência"
+      },
+      "media": {
+        "logoImage": "./assets/colegio-uniao/logo-color.webp",
+        "footerLogoImage": "./assets/colegio-uniao/logo-white.webp",
+        "heroImage": "./assets/colegio-uniao/hero-unionistas.webp",
+        "secondaryImage": "./assets/colegio-uniao/ensino-bilingue.webp"
+      },
+      "unit": {
+        "name": "Unidade Uruguaiana",
+        "description": "No Centro de Uruguaiana, nossa unidade reúne mais de 6 mil m² em ambientes planejados para o desenvolvimento acadêmico, social e esportivo dos alunos.",
+        "image": "./assets/colegio-uniao/unidade-uruguaiana.webp"
+      },
+      "segments": [
+        {
+          "title": "Ensino Fundamental - Anos Iniciais",
+          "text": "Aprendizagens significativas que estimulam curiosidade, autonomia, senso crítico e valores desde os primeiros anos.",
+          "image": "./assets/colegio-uniao/fundamental-iniciais.webp",
+          "imageAlt": "Alunos dos Anos Iniciais em atividade ao ar livre"
+        },
+        {
+          "title": "Ensino Fundamental - Anos Finais",
+          "text": "Aprofundamento dos conhecimentos e desenvolvimento da autonomia intelectual, com formação cidadã e pensamento crítico.",
+          "image": "./assets/colegio-uniao/fundamental-finais.webp",
+          "imageAlt": "Estudantes dos Anos Finais em sala de aula"
+        },
+        {
+          "title": "Ensino Médio",
+          "text": "Excelência acadêmica e projeto de vida para formar jovens protagonistas, éticos e preparados para novas escolhas.",
+          "image": "./assets/colegio-uniao/ensino-medio.webp",
+          "imageAlt": "Professora acompanhando uma estudante do Ensino Médio"
+        }
+      ],
+      "differentials": [
+        {
+          "title": "Ensino bilíngue",
+          "text": "Inglês integrado a diferentes áreas do conhecimento, com metodologia internacional desde os primeiros anos.",
+          "image": "./assets/colegio-uniao/ensino-bilingue.webp",
+          "imageAlt": "Alunos aprendendo juntos em sala de aula"
+        },
+        {
+          "title": "Tradição com ensino atualizado",
+          "text": "Uma história centenária que combina legado institucional, inovação e práticas pedagógicas contemporâneas.",
+          "image": "./assets/colegio-uniao/unidade-uruguaiana.webp",
+          "imageAlt": "Fachada histórica do Colégio União em Uruguaiana"
+        },
+        {
+          "title": "Formação de líderes",
+          "text": "Projetos que desenvolvem autonomia, responsabilidade e participação ativa na escola e na comunidade.",
+          "image": "./assets/colegio-uniao/formacao-lideres.webp",
+          "imageAlt": "Estudantes em atividade no laboratório de ciências"
+        },
+        {
+          "title": "Programa socioemocional",
+          "text": "Empatia, cooperação, responsabilidade e autoconhecimento trabalhados de forma contínua e planejada.",
+          "image": "./assets/colegio-uniao/programa-socioemocional.webp",
+          "imageAlt": "Professora e alunos em uma atividade colaborativa"
+        },
+        {
+          "title": "Atividades extracurriculares",
+          "text": "Experiências esportivas e culturais que fortalecem habilidades, disciplina, convivência e bem-estar.",
+          "image": "./assets/colegio-uniao/atividades-extracurriculares.webp",
+          "imageAlt": "Aluno praticando basquete no ginásio do colégio"
+        }
+      ],
+      "highlights": [
+        "Programa bilíngue desde os primeiros anos",
+        "Tradição centenária com ensino atualizado",
+        "Formação de lideranças e protagonismo juvenil",
+        "Ambiente acolhedor e estrutura completa"
+      ]
+    }
+  ]
+}

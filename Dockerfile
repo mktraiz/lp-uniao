@@ -6,7 +6,7 @@ COPY . .
 RUN npm run build
 
 FROM nginx:1.27-alpine
-ARG LP_APP_ID=all
+ARG LP_APP_ID=colegio-uniao--captacao
 COPY deploy/easypanel/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /app/dist/apps/${LP_APP_ID}/ /usr/share/nginx/html/
 EXPOSE 80

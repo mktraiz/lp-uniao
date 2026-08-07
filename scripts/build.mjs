@@ -7,12 +7,15 @@ const previewsPath = path.join(root, "content", "model-previews.json");
 const pageTemplatePath = path.join(root, "templates", "page.html");
 const tokensCssPath = path.join(root, "templates", "shared", "tokens.css");
 const baseCssPath = path.join(root, "templates", "shared", "base.css");
+const unionBrandbookCssPath = path.join(root, "templates", "shared", "union-brandbook.css");
 const modelsDir = path.join(root, "templates", "models");
+const publicDir = path.join(root, "public");
 const distDir = path.join(root, "dist");
 const allDir = path.join(distDir, "apps", "all");
 const previewsDir = path.join(distDir, "previews");
-const publishAppId = process.env.LP_APP_ID || "";
-const publishModel = process.env.LP_MODEL || process.env.PUBLISH_MODEL || "matriculas-uniao-institucional";
+const requestedPreviewModel = process.env.LP_MODEL || process.env.PUBLISH_MODEL || "";
+const publishAppId = process.env.LP_APP_ID || (requestedPreviewModel ? "" : "colegio-uniao--captacao");
+const publishModel = requestedPreviewModel;
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -59,10 +62,23 @@ const cssUrlFor = (value = "") => String(value || "").replaceAll("\\", "").repla
 const renderContentCards = (items = [], className = "school-content-card") =>
   items
     .map(
-      (item) =>
-        `<article class="${className}"><h3>${escapeHtml(item.title || "")}</h3><p>${escapeHtml(item.text || "")}</p></article>`
+      (item) => {
+        const title = escapeHtml(item.title || "");
+        const image = item.image
+          ? `<div class="school-card-media"><img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.imageAlt || item.title || "")}" width="1024" height="684" loading="lazy"></div>`
+          : "";
+
+        return `<article class="${className}">${image}<div class="school-card-body"><h3>${title}</h3><p>${escapeHtml(item.text || "")}</p></div></article>`;
+      }
     )
     .join("\n            ");
+
+async function copyPublicFiles(outputDir) {
+  const hasPublicDir = await fs.stat(publicDir).then((stat) => stat.isDirectory()).catch(() => false);
+  if (hasPublicDir) {
+    await fs.cp(publicDir, outputDir, { recursive: true });
+  }
+}
 
 const raizFormEmbed = `<div id="raiz-form"></div>
 <script src="https://formularios.raizeducacao.com.br/widget.js?v=2" data-api="https://formularios.raizeducacao.com.br" defer></script>`;
@@ -104,6 +120,10 @@ async function renderLp({ schoolConfig, lp, appId, pageTemplate, tokensCss, base
     heroImage: cssUrlFor(lp.media?.heroImage || ""),
     secondaryImage: cssUrlFor(lp.media?.secondaryImage || lp.media?.heroImage || ""),
     logoImage: cssUrlFor(lp.media?.logoImage || ""),
+    footerLogoImage: cssUrlFor(lp.media?.footerLogoImage || lp.media?.logoImage || ""),
+    unitImage: cssUrlFor(lp.unit?.image || lp.media?.secondaryImage || lp.media?.heroImage || ""),
+    unitName: textFor(lp.unit?.name, `Unidade ${schoolConfig.school.city}`),
+    unitDescription: textFor(lp.unit?.description, "Conheca de perto os ambientes e a proposta pedagogica da nossa unidade."),
     formEmbed: raizFormEmbed,
     primaryColor: schoolConfig.primaryColor || "#0F6B5F",
     secondaryColor: schoolConfig.secondaryColor || "#F5B84B"
@@ -140,11 +160,14 @@ async function buildApps({ pageTemplate, tokensCss, baseCss }) {
 
       await fs.mkdir(pageDir, { recursive: true });
       await fs.writeFile(path.join(pageDir, "index.html"), rendered.html);
+      await copyPublicFiles(pageDir);
       await fs.mkdir(appDir, { recursive: true });
       await fs.writeFile(path.join(appDir, "index.html"), rendered.html);
+      await copyPublicFiles(appDir);
 
       if (publishAppId && appId === publishAppId) {
         await fs.writeFile(path.join(distDir, "index.html"), rendered.html);
+        await copyPublicFiles(distDir);
         publishedRoot = true;
       }
 
@@ -214,9 +237,11 @@ async function buildPreviews({ pageTemplate, tokensCss, baseCss, rootAlreadyPubl
 
     await fs.mkdir(previewDir, { recursive: true });
     await fs.writeFile(path.join(previewDir, "index.html"), rendered.html);
+    await copyPublicFiles(previewDir);
 
     if (!rootAlreadyPublished && publishModel && lp.model === publishModel) {
       await fs.writeFile(path.join(distDir, "index.html"), rendered.html);
+      await copyPublicFiles(distDir);
       rootAlreadyPublished = true;
     }
 
@@ -277,11 +302,13 @@ async function build() {
   const pageTemplate = await fs.readFile(pageTemplatePath, "utf8");
   const tokensCss = await fs.readFile(tokensCssPath, "utf8");
   const baseCss = await fs.readFile(baseCssPath, "utf8");
+  const unionBrandbookCss = await fs.readFile(unionBrandbookCssPath, "utf8");
 
   await fs.rm(distDir, { recursive: true, force: true });
 
-  const apps = await buildApps({ pageTemplate, tokensCss, baseCss });
-  const previews = await buildPreviews({ pageTemplate, tokensCss, baseCss, rootAlreadyPublished: apps.publishedRoot });
+  const combinedBaseCss = `${baseCss}\n${unionBrandbookCss}`;
+  const apps = await buildApps({ pageTemplate, tokensCss, baseCss: combinedBaseCss });
+  const previews = await buildPreviews({ pageTemplate, tokensCss, baseCss: combinedBaseCss, rootAlreadyPublished: apps.publishedRoot });
 
   console.log(`Build finalizado: ${apps.appCount} LP(s) em ${apps.schoolCount} escola(s).`);
   console.log(`Previews gerados: ${previews.previewCount} modelo(s).`);

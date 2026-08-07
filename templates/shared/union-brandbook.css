@@ -1,0 +1,1072 @@
+      @font-face {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("./assets/fonts/poppins-400.woff2") format("woff2");
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url("./assets/fonts/poppins-600.woff2") format("woff2");
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url("./assets/fonts/poppins-700.woff2") format("woff2");
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url("./assets/fonts/poppins-800.woff2") format("woff2");
+      }
+
+      @font-face {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 900;
+        font-display: swap;
+        src: url("./assets/fonts/poppins-900.woff2") format("woff2");
+      }
+
+      .union-brandbook {
+        --union-navy: #0f4c86;
+        --union-blue: #005fba;
+        --union-sky: #00a5ed;
+        --union-red: #cd3739;
+        --union-rose: #cf7677;
+        --union-ink: #14283b;
+        --union-text: #41566a;
+        --union-mist: #f2f7fb;
+        --union-line: #dce7ef;
+        min-width: 0;
+        overflow: hidden;
+        background: #ffffff;
+        color: var(--union-ink);
+        font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+      }
+
+      .union-brandbook .wrap {
+        width: min(1200px, calc(100% - 48px));
+      }
+
+      .union-brandbook h1,
+      .union-brandbook h2,
+      .union-brandbook h3,
+      .union-brandbook p {
+        margin: 0;
+      }
+
+      .union-brandbook h1,
+      .union-brandbook h2,
+      .union-brandbook h3 {
+        text-wrap: balance;
+      }
+
+      .union-brandbook .button,
+      .union-bb-nav-cta,
+      .union-bb-mobile-cta {
+        display: inline-flex;
+        min-height: 54px;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 26px;
+        border: 0;
+        border-radius: 999px;
+        background: var(--union-red);
+        color: #ffffff;
+        font-family: inherit;
+        font-size: 0.92rem;
+        font-weight: 800;
+        line-height: 1.2;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0 14px 30px rgb(109 10 27 / 0.22);
+        transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+      }
+
+      .union-brandbook .button:hover,
+      .union-bb-nav-cta:hover,
+      .union-bb-mobile-cta:hover {
+        background: #b92832;
+        box-shadow: 0 18px 36px rgb(109 10 27 / 0.28);
+        transform: translateY(-2px);
+      }
+
+      .union-brandbook .button:focus-visible,
+      .union-bb-nav-cta:focus-visible,
+      .union-bb-mobile-cta:focus-visible,
+      .union-bb-logo:focus-visible,
+      .union-bb-footer a:focus-visible,
+      .union-bb-form:focus-visible {
+        outline: 3px solid var(--union-sky);
+        outline-offset: 4px;
+      }
+
+      .union-bb-nav {
+        position: relative;
+        z-index: 30;
+        height: 92px;
+        border-bottom: 1px solid rgb(15 76 134 / 0.1);
+        background: #ffffff;
+      }
+
+      .union-bb-nav-inner {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+      }
+
+      .union-bb-logo {
+        display: inline-flex;
+        width: 216px;
+        height: 76px;
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .union-bb-logo img,
+      .union-bb-footer-logo img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+      }
+
+      .union-bb-nav-side {
+        display: flex;
+        align-items: center;
+        gap: 26px;
+      }
+
+      .union-bb-nav-side > span {
+        color: var(--union-navy);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .union-bb-nav-cta {
+        min-height: 48px;
+        padding: 12px 22px;
+      }
+
+      .union-bb-hero {
+        position: relative;
+        min-height: 735px;
+        isolation: isolate;
+        background:
+          linear-gradient(90deg, rgb(9 53 95 / 0.97) 0%, rgb(15 76 134 / 0.92) 42%, rgb(15 76 134 / 0.68) 72%, rgb(9 53 95 / 0.54) 100%),
+          var(--union-hero-image);
+        background-position: center;
+        background-size: cover;
+        color: #ffffff;
+      }
+
+      .union-bb-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background:
+          radial-gradient(circle at 8% 18%, rgb(0 165 237 / 0.22) 0 3px, transparent 4px) 0 0 / 25px 25px,
+          linear-gradient(115deg, transparent 68%, rgb(205 55 57 / 0.28) 68% 72%, transparent 72%);
+        mask-image: linear-gradient(90deg, #000, transparent 58%);
+        pointer-events: none;
+      }
+
+      .union-bb-hero-pattern {
+        position: absolute;
+        top: 82px;
+        right: -92px;
+        width: 250px;
+        height: 250px;
+        border: 34px solid rgb(255 255 255 / 0.12);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .union-bb-hero-pattern::after {
+        content: "";
+        position: absolute;
+        right: 126px;
+        bottom: -170px;
+        width: 74px;
+        height: 190px;
+        border-radius: 44px;
+        background: rgb(205 55 57 / 0.74);
+        transform: rotate(32deg);
+      }
+
+      .union-bb-hero-grid {
+        min-height: 735px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(390px, 0.58fr);
+        gap: clamp(42px, 6vw, 86px);
+        align-items: center;
+        padding: 72px 0 116px;
+      }
+
+      .union-bb-hero-copy {
+        max-width: 700px;
+      }
+
+      .union-bb-eyebrow,
+      .union-bb-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: currentColor;
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.075em;
+        line-height: 1.45;
+        text-transform: uppercase;
+      }
+
+      .union-bb-eyebrow::before,
+      .union-bb-kicker::before {
+        content: "";
+        width: 34px;
+        height: 4px;
+        flex: 0 0 auto;
+        border-radius: 999px;
+        background: var(--union-red);
+      }
+
+      .union-bb-hero-copy h1 {
+        max-width: 670px;
+        margin-top: 20px;
+        font-size: clamp(3.25rem, 5.8vw, 5.5rem);
+        font-weight: 900;
+        letter-spacing: -0.055em;
+        line-height: 0.98;
+      }
+
+      .union-bb-hero-copy > p {
+        max-width: 600px;
+        margin-top: 24px;
+        color: rgb(255 255 255 / 0.88);
+        font-size: clamp(1rem, 1.4vw, 1.18rem);
+        line-height: 1.7;
+      }
+
+      .union-bb-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 18px 24px;
+        margin-top: 32px;
+      }
+
+      .union-bb-actions > span {
+        max-width: 240px;
+        color: rgb(255 255 255 / 0.76);
+        font-size: 0.78rem;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+
+      .union-bb-form {
+        scroll-margin-top: 24px;
+        padding: 30px;
+        border-top: 6px solid var(--union-red);
+        border-radius: 24px;
+        background: #ffffff;
+        color: var(--union-ink);
+        box-shadow: 0 30px 70px rgb(0 27 54 / 0.34);
+      }
+
+      .union-bb-form-head {
+        display: grid;
+        gap: 7px;
+        margin-bottom: 22px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--union-line);
+      }
+
+      .union-bb-form-head span {
+        color: var(--union-red);
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .union-bb-form-head strong {
+        color: var(--union-navy);
+        font-size: clamp(1.55rem, 2.2vw, 2rem);
+        line-height: 1.14;
+      }
+
+      .union-bb-form-head p {
+        color: var(--union-text);
+        font-size: 0.9rem;
+        line-height: 1.55;
+      }
+
+      .union-bb-form #raiz-form {
+        min-height: 330px;
+      }
+
+      .union-bb-proof {
+        position: relative;
+        z-index: 6;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: -68px;
+        overflow: hidden;
+        border: 1px solid var(--union-line);
+        border-radius: 22px;
+        background: #ffffff;
+        box-shadow: 0 24px 64px rgb(15 76 134 / 0.16);
+      }
+
+      .union-bb-proof article {
+        min-height: 136px;
+        display: grid;
+        align-content: center;
+        gap: 8px;
+        padding: 28px 34px;
+        border-right: 1px solid var(--union-line);
+      }
+
+      .union-bb-proof article:last-child {
+        border-right: 0;
+      }
+
+      .union-bb-proof strong {
+        color: var(--union-navy);
+        font-size: clamp(1.25rem, 2vw, 1.75rem);
+        line-height: 1.1;
+      }
+
+      .union-bb-proof span {
+        color: var(--union-text);
+        font-size: 0.86rem;
+        line-height: 1.55;
+      }
+
+      .union-bb-section {
+        padding: 112px 0;
+      }
+
+      .union-bb-intro {
+        padding-top: 146px;
+      }
+
+      .union-bb-intro-grid,
+      .union-bb-unit-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.06fr) minmax(340px, 0.82fr);
+        gap: clamp(44px, 7vw, 96px);
+        align-items: center;
+      }
+
+      .union-bb-intro-visual {
+        position: relative;
+        min-height: 560px;
+      }
+
+      .union-bb-intro-visual::before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: -24px;
+        right: -24px;
+        width: 120px;
+        height: 120px;
+        border: 18px solid var(--union-sky);
+        border-radius: 50%;
+        opacity: 0.28;
+      }
+
+      .union-bb-intro-visual::after {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        bottom: -22px;
+        left: -22px;
+        width: 128px;
+        height: 128px;
+        background: radial-gradient(circle, var(--union-blue) 0 3px, transparent 4px) 0 0 / 22px 22px;
+        opacity: 0.34;
+      }
+
+      .union-bb-intro-visual img {
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 30px 110px 30px 30px;
+        object-fit: cover;
+        box-shadow: 0 28px 64px rgb(15 76 134 / 0.18);
+      }
+
+      .union-bb-intro-visual > span {
+        position: absolute;
+        z-index: 2;
+        right: -28px;
+        bottom: 36px;
+        max-width: 280px;
+        padding: 22px 26px;
+        border-radius: 18px 18px 18px 2px;
+        background: var(--union-red);
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 800;
+        line-height: 1.4;
+        box-shadow: 0 18px 42px rgb(122 19 30 / 0.26);
+      }
+
+      .union-bb-intro-copy {
+        display: grid;
+        justify-items: start;
+        gap: 20px;
+      }
+
+      .union-bb-kicker {
+        color: var(--union-blue);
+      }
+
+      .union-bb-intro-copy h2,
+      .union-bb-section-head h2,
+      .union-bb-unit-copy h2,
+      .union-bb-final h2 {
+        color: var(--union-navy);
+        font-size: clamp(2.35rem, 4.2vw, 4.25rem);
+        font-weight: 900;
+        letter-spacing: -0.045em;
+        line-height: 1.03;
+      }
+
+      .union-bb-intro-copy > p,
+      .union-bb-section-head > p,
+      .union-bb-section-head > div + p,
+      .union-bb-unit-copy > p,
+      .union-bb-final p {
+        color: var(--union-text);
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+
+      .union-bb-intro-copy .button {
+        margin-top: 6px;
+      }
+
+      .union-bb-segments {
+        background: var(--union-mist);
+      }
+
+      .union-bb-section-head {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(300px, 0.46fr);
+        gap: 40px;
+        align-items: end;
+        margin-bottom: 48px;
+      }
+
+      .union-bb-section-head > div {
+        display: grid;
+        gap: 16px;
+      }
+
+      .union-bb-section-head > p {
+        max-width: 470px;
+        justify-self: end;
+      }
+
+      .union-bb-card-grid {
+        display: grid;
+        gap: 22px;
+      }
+
+      .union-bb-segment-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .union-brandbook .school-content-card {
+        min-width: 0;
+        overflow: hidden;
+        border: 1px solid var(--union-line);
+        border-radius: 24px;
+        background: #ffffff;
+        box-shadow: 0 16px 42px rgb(15 76 134 / 0.08);
+      }
+
+      .union-brandbook .school-card-media {
+        position: relative;
+        height: 250px;
+        overflow: hidden;
+        background: #dfeaf2;
+      }
+
+      .union-brandbook .school-card-media::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 58%, rgb(4 37 67 / 0.34));
+        pointer-events: none;
+      }
+
+      .union-brandbook .school-card-media img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        transition: transform 420ms ease;
+      }
+
+      .union-brandbook .school-content-card:hover .school-card-media img {
+        transform: scale(1.035);
+      }
+
+      .union-brandbook .school-card-body {
+        display: grid;
+        gap: 12px;
+        padding: 26px;
+      }
+
+      .union-brandbook .school-card-body h3 {
+        color: var(--union-navy);
+        font-size: 1.28rem;
+        font-weight: 800;
+        line-height: 1.28;
+      }
+
+      .union-brandbook .school-card-body p {
+        color: var(--union-text);
+        font-size: 0.91rem;
+        line-height: 1.7;
+      }
+
+      .union-bb-centered-action {
+        display: flex;
+        justify-content: center;
+        margin-top: 42px;
+      }
+
+      .union-bb-differentials {
+        position: relative;
+        background: #ffffff;
+      }
+
+      .union-bb-differentials::before {
+        content: "";
+        position: absolute;
+        top: 88px;
+        left: -46px;
+        width: 132px;
+        height: 132px;
+        border: 26px solid rgb(207 118 119 / 0.16);
+        border-radius: 50%;
+      }
+
+      .union-bb-section-head-centered {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+      }
+
+      .union-bb-section-head-centered > p {
+        max-width: 680px;
+        justify-self: center;
+      }
+
+      .union-bb-section-head-centered .union-bb-kicker {
+        justify-self: center;
+      }
+
+      .union-bb-differential-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+      }
+
+      .union-bb-differential-grid .school-content-card {
+        grid-column: span 2;
+      }
+
+      .union-bb-differential-grid .school-content-card:nth-child(1),
+      .union-bb-differential-grid .school-content-card:nth-child(2) {
+        grid-column: span 3;
+      }
+
+      .union-bb-differential-grid .school-content-card:nth-child(1) .school-card-media,
+      .union-bb-differential-grid .school-content-card:nth-child(2) .school-card-media {
+        height: 290px;
+      }
+
+      .union-bb-differential-grid .school-card-media {
+        height: 210px;
+      }
+
+      .union-bb-unit {
+        background:
+          radial-gradient(circle at 92% 10%, rgb(0 165 237 / 0.1), transparent 24%),
+          var(--union-mist);
+      }
+
+      .union-bb-unit-grid {
+        grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.72fr);
+      }
+
+      .union-bb-unit-photo {
+        position: relative;
+        min-height: 560px;
+      }
+
+      .union-bb-unit-photo::before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        inset: 28px -24px -24px 28px;
+        border: 3px solid var(--union-sky);
+        border-radius: 26px;
+        opacity: 0.42;
+      }
+
+      .union-bb-unit-photo img {
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 28px;
+        object-fit: cover;
+        box-shadow: 0 28px 60px rgb(15 76 134 / 0.16);
+      }
+
+      .union-bb-unit-copy {
+        display: grid;
+        justify-items: start;
+        gap: 20px;
+      }
+
+      .union-bb-unit-copy address {
+        padding: 16px 20px;
+        border-left: 5px solid var(--union-red);
+        background: #ffffff;
+        color: var(--union-navy);
+        font-size: 0.95rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.6;
+      }
+
+      .union-bb-unit-copy ul {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .union-bb-unit-copy li {
+        position: relative;
+        padding-left: 26px;
+        color: var(--union-text);
+        font-size: 0.92rem;
+        line-height: 1.55;
+      }
+
+      .union-bb-unit-copy li::before {
+        content: "";
+        position: absolute;
+        top: 0.48em;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--union-sky);
+        box-shadow: 0 0 0 4px rgb(0 165 237 / 0.14);
+      }
+
+      .union-bb-final {
+        position: relative;
+        padding: 116px 0;
+        isolation: isolate;
+        background:
+          linear-gradient(90deg, rgb(8 52 93 / 0.97), rgb(15 76 134 / 0.86)),
+          var(--union-hero-image);
+        background-position: center;
+        background-size: cover;
+        color: #ffffff;
+      }
+
+      .union-bb-final::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        right: 5%;
+        bottom: -120px;
+        width: 280px;
+        height: 280px;
+        border: 48px solid rgb(255 255 255 / 0.08);
+        border-radius: 50%;
+      }
+
+      .union-bb-final-inner {
+        display: grid;
+        justify-items: start;
+        gap: 22px;
+      }
+
+      .union-bb-final h2 {
+        max-width: 830px;
+        color: #ffffff;
+      }
+
+      .union-bb-final p {
+        max-width: 660px;
+        color: rgb(255 255 255 / 0.82);
+      }
+
+      .union-bb-footer {
+        padding: 34px 0;
+        background: #0a2946;
+        color: rgb(255 255 255 / 0.76);
+      }
+
+      .union-bb-footer-grid {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 38px;
+        align-items: center;
+      }
+
+      .union-bb-footer-logo {
+        width: 180px;
+        height: 63px;
+        display: block;
+      }
+
+      .union-bb-footer p {
+        justify-self: center;
+        font-size: 0.82rem;
+        line-height: 1.55;
+      }
+
+      .union-bb-footer > .wrap > a:last-child {
+        color: #ffffff;
+        font-size: 0.84rem;
+        font-weight: 800;
+        text-decoration-color: var(--union-sky);
+        text-decoration-thickness: 2px;
+        text-underline-offset: 6px;
+      }
+
+      .union-bb-mobile-cta {
+        display: none;
+      }
+
+      .union-brandbook .reveal,
+      .union-brandbook .school-content-card {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 560ms ease, transform 560ms cubic-bezier(0.2, 0.8, 0.2, 1);
+      }
+
+      .union-brandbook .reveal.is-visible,
+      .union-brandbook .school-content-card.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .union-brandbook *,
+        .union-brandbook *::before,
+        .union-brandbook *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+          animation-duration: 0.01ms !important;
+        }
+      }
+
+      @media (max-width: 980px) {
+        .union-bb-hero-grid {
+          grid-template-columns: minmax(0, 0.86fr) minmax(360px, 0.64fr);
+          gap: 34px;
+        }
+
+        .union-bb-hero-copy h1 {
+          font-size: clamp(3rem, 6.2vw, 4.4rem);
+        }
+
+        .union-bb-intro-grid,
+        .union-bb-unit-grid {
+          gap: 46px;
+        }
+
+        .union-bb-differential-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .union-bb-differential-grid .school-content-card,
+        .union-bb-differential-grid .school-content-card:nth-child(1),
+        .union-bb-differential-grid .school-content-card:nth-child(2) {
+          grid-column: auto;
+        }
+
+        .union-bb-differential-grid .school-content-card:last-child {
+          grid-column: 1 / -1;
+        }
+      }
+
+      @media (max-width: 820px) {
+        .union-brandbook .wrap {
+          width: min(100% - 32px, 1200px);
+        }
+
+        .union-bb-nav-side > span {
+          display: none;
+        }
+
+        .union-bb-hero {
+          min-height: 0;
+          background:
+            linear-gradient(180deg, rgb(8 52 93 / 0.9), rgb(15 76 134 / 0.97) 58%, rgb(9 53 95 / 1)),
+            var(--union-hero-image);
+          background-position: 50% center;
+        }
+
+        .union-bb-hero-grid,
+        .union-bb-intro-grid,
+        .union-bb-unit-grid,
+        .union-bb-section-head {
+          grid-template-columns: 1fr;
+        }
+
+        .union-bb-hero-grid {
+          min-height: 0;
+          gap: 42px;
+          padding: 78px 0 60px;
+        }
+
+        .union-bb-hero-copy {
+          max-width: 640px;
+        }
+
+        .union-bb-form {
+          width: min(100%, 620px);
+          justify-self: center;
+        }
+
+        .union-bb-proof {
+          grid-template-columns: 1fr;
+          margin-top: 0;
+          border-radius: 0 0 22px 22px;
+        }
+
+        .union-bb-proof article {
+          min-height: 112px;
+          border-right: 0;
+          border-bottom: 1px solid var(--union-line);
+        }
+
+        .union-bb-proof article:last-child {
+          border-bottom: 0;
+        }
+
+        .union-bb-intro {
+          padding-top: 96px;
+        }
+
+        .union-bb-intro-grid,
+        .union-bb-unit-grid {
+          gap: 64px;
+        }
+
+        .union-bb-intro-visual,
+        .union-bb-unit-photo {
+          min-height: 470px;
+        }
+
+        .union-bb-intro-copy,
+        .union-bb-unit-copy {
+          max-width: 680px;
+        }
+
+        .union-bb-section-head {
+          gap: 22px;
+        }
+
+        .union-bb-section-head > p {
+          max-width: 660px;
+          justify-self: start;
+        }
+
+        .union-bb-segment-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .union-bb-segment-grid .school-content-card {
+          display: grid;
+          grid-template-columns: minmax(240px, 0.78fr) 1fr;
+          align-items: stretch;
+        }
+
+        .union-bb-segment-grid .school-card-media {
+          height: 100%;
+          min-height: 280px;
+        }
+
+        .union-bb-footer-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          justify-items: start;
+        }
+
+        .union-bb-footer p {
+          justify-self: start;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .union-brandbook {
+          padding-bottom: calc(76px + env(safe-area-inset-bottom));
+        }
+
+        .union-bb-nav {
+          height: 74px;
+        }
+
+        .union-bb-logo {
+          width: 146px;
+          height: 56px;
+        }
+
+        .union-bb-nav-cta {
+          min-height: 42px;
+          padding: 10px 16px;
+          font-size: 0.76rem;
+        }
+
+        .union-bb-hero-grid {
+          padding: 58px 0 46px;
+        }
+
+        .union-bb-hero-pattern {
+          top: 24px;
+          right: -140px;
+        }
+
+        .union-bb-hero-copy h1 {
+          font-size: clamp(2.7rem, 13.2vw, 4rem);
+        }
+
+        .union-bb-hero-copy > p {
+          font-size: 0.98rem;
+        }
+
+        .union-bb-actions {
+          display: grid;
+        }
+
+        .union-bb-actions .button {
+          width: 100%;
+        }
+
+        .union-bb-actions > span {
+          max-width: none;
+          text-align: center;
+        }
+
+        .union-bb-form {
+          padding: 22px 18px;
+          border-radius: 20px;
+        }
+
+        .union-bb-proof article {
+          padding: 24px;
+        }
+
+        .union-bb-section,
+        .union-bb-final {
+          padding: 76px 0;
+        }
+
+        .union-bb-intro {
+          padding-top: 76px;
+        }
+
+        .union-bb-intro-visual,
+        .union-bb-unit-photo {
+          min-height: 340px;
+        }
+
+        .union-bb-intro-visual img {
+          border-radius: 24px 64px 24px 24px;
+        }
+
+        .union-bb-intro-visual > span {
+          right: 14px;
+          bottom: -28px;
+          max-width: calc(100% - 28px);
+          padding: 16px 19px;
+          font-size: 0.86rem;
+        }
+
+        .union-bb-intro-copy h2,
+        .union-bb-section-head h2,
+        .union-bb-unit-copy h2,
+        .union-bb-final h2 {
+          font-size: clamp(2.1rem, 10vw, 3rem);
+        }
+
+        .union-bb-segment-grid .school-content-card {
+          display: block;
+        }
+
+        .union-bb-segment-grid .school-card-media,
+        .union-bb-differential-grid .school-card-media,
+        .union-bb-differential-grid .school-content-card:nth-child(1) .school-card-media,
+        .union-bb-differential-grid .school-content-card:nth-child(2) .school-card-media {
+          height: 230px;
+          min-height: 0;
+        }
+
+        .union-bb-differential-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .union-bb-differential-grid .school-content-card:last-child {
+          grid-column: auto;
+        }
+
+        .union-bb-unit-photo::before {
+          inset: 18px -12px -14px 18px;
+        }
+
+        .union-bb-final-inner {
+          justify-items: stretch;
+        }
+
+        .union-bb-final-inner .button {
+          width: 100%;
+        }
+
+        .union-bb-mobile-cta {
+          position: fixed;
+          z-index: 100;
+          right: 12px;
+          bottom: calc(10px + env(safe-area-inset-bottom));
+          left: 12px;
+          min-height: 56px;
+          display: flex;
+          box-shadow: 0 16px 38px rgb(27 18 22 / 0.36);
+        }
+      }
